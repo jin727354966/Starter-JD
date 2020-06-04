@@ -1,0 +1,102 @@
+.container{
+    width: 990px;
+    margin: 0 auto;
+}
+$color: #999; //普通文字颜色
+$thovColor:#c81623;    //菜单划入颜色
+$tColor: #333;//标题文字颜色  菜单颜色
+@mixin wh($h,$w:100%){//设置宽高
+    width:$w;
+    height:$h;
+}
+@mixin positionstyle($l,$t,$r:unset) {//定位 left top
+    position: absolute;
+    left: $l;
+    top: $t;
+    right:$r;
+}
+@mixin borderstyle($style:solid,$size:1px,$color:#ccc){
+    border:$style $size $color;
+}
+%clear{
+    content:"";
+    height: 0;
+    display: block;
+    overflow: hidden;
+    visibility: hidden;
+    clear: both;
+}
+
+/* 自定义字体文件引入 */
+@font-face{font-family:impact;src:url(../font/b07c9855bd807ccc9d825cb0392c6ef8.woff) format("woff");font-weight:400;font-style:normal}
+@font-face{font-family:fzzzh;src:url(//misc.360buyimg.com/mtd/pc/index_2019/1.0.0/fonts/f7001cef4a64d1b77d0cd4dfc670cc35.woff) format("woff");font-weight:400;font-style:normal}
+@font-face{font-family:iconfont;src:url(../font/a84f5777e97992c6fb6d423c003f187b.woff) format("woff")}
+.iconfont {
+    font-family: iconfont,sans-serif;
+    font-style: normal;
+    -webkit-text-stroke-width: .2px;
+    -moz-osx-font-smoothing: grayscale;
+    font-size: 16px;
+}
+.upload-bg {
+    font-family: iconfont,sans-serif;
+    color: #9f9f9f;
+}
+@import 'search';
+#search{
+    .logo{
+        img{
+            width: 134px;
+            height: 42px;
+            margin-top: 14px;
+
+        }
+    }
+}
+#search{
+    .logo{
+        position: relative;
+        .bnav{
+        position: absolute;
+        left: -55px;
+        bottom: -22px;
+        .bnav_title{
+            width: 190px;
+            height: 33px;
+            background-color: #f30213;
+            text-align: center;
+            color: white;
+            font-size: 14px;
+            line-height: 33px;
+            &:hover{
+                &+.bnav_list{
+                    display: block;
+                } 
+            }
+        }
+        .bnav_list{
+            display: none;
+            position: absolute;
+            top: 33px;
+            left: 0;
+            width: 190px;
+            background-color: #fff;
+            ul{
+                padding-top: 7px;
+                box-shadow: -1px 3px 12px -1px rgba(0,0,0,.3);
+                li{
+                    padding-left: 18px;
+                    a{
+                        line-height: 25px;
+                        color: $tColor;
+                        font-size: 14px;
+                        &:hover{
+                            color:$thovColor;
+                        }
+                    }
+                }
+            }
+        }
+    }
+    }
+}
