@@ -1,0 +1,160 @@
+.container {
+  width: 990px;
+  margin: 0 auto;
+}
+
+#header {
+  width: 100%;
+  height: 30px;
+  background-color: #e3e4e5;
+  margin: 0 auto;
+}
+#header .container {
+  height: 30px;
+  position: relative;
+}
+#header .container .big {
+  display: none;
+  position: absolute;
+  left: 0;
+  top: 29px;
+  right: unset;
+  border: solid 1px #ccc;
+  width: 988px;
+  height: 221px;
+  padding: 15px 0;
+}
+#header .left {
+  float: left;
+}
+#header .left .area {
+  position: relative;
+  font-size: 0;
+  width: 58px;
+  height: 28px;
+  line-height: 28px;
+  text-align: center;
+  border: solid 1px #e3e4e5;
+}
+#header .left .area .icon-ziyuan {
+  color: #f10215;
+}
+#header .left .area:hover {
+  border: solid 1px #ccc;
+  height: 29.5px;
+  z-index: 99;
+  border-bottom: unset;
+  background-color: #fff;
+}
+#header .left .area:hover + .city {
+  z-index: 1;
+  display: block;
+}
+#header .left .city {
+  position: absolute;
+  left: 0;
+  top: 29px;
+  right: unset;
+  z-index: 2;
+  display: none;
+  width: 300px;
+  height: 442px;
+  padding: 10px;
+  border: solid 1px #ccc;
+}
+#header .left .city ul li {
+  width: 52px;
+  height: 28px;
+  padding-left: 8px;
+  line-height: 28px;
+  text-align: left;
+  float: left;
+}
+#header .left .city ul li .active {
+  display: block;
+  width: 24px;
+  height: 28px;
+  padding: 0 8px;
+  background-color: #f10215;
+  color: #fff;
+}
+#header .nav {
+  float: right;
+  height: 100%;
+}
+#header .nav ul {
+  height: 100%;
+}
+#header .nav ul li {
+  float: left;
+  height: 100%;
+  position: relative;
+}
+#header .nav ul li .list {
+  position: absolute;
+  left: 0;
+  top: 29px;
+  right: unset;
+  border: solid 1px #ccc;
+  display: none;
+}
+#header .nav ul li .oneitem {
+  width: 280px;
+  height: 161px;
+}
+#header .nav ul li .twoitem {
+  width: 140px;
+  height: 72px;
+  padding: 10px 0;
+}
+#header .nav ul li .thirditem {
+  width: 177px;
+  height: 227px;
+}
+#header .nav ul li a {
+  text-align: center;
+  display: inline-block;
+  padding: 0 7px;
+  line-height: 30px;
+  vertical-align: top;
+}
+#header .nav ul li .login {
+  padding: 0;
+}
+#header .nav ul li .item {
+  height: 28px;
+  padding-right: 20px;
+  position: relative;
+  z-index: 99;
+  border: solid #e3e4e5 1px;
+  border-bottom: unset;
+}
+#header .nav ul li .item .icon-xiangxia {
+  position: absolute;
+  left: unset;
+  top: 1px;
+  right: 6px;
+  color: #999;
+  font-size: 12px;
+  font-weight: 700;
+}
+#header .nav ul li .item:hover {
+  border: solid 1px #ccc;
+  border-bottom: unset;
+  background-color: #fff;
+  height: 29.5px;
+  z-index: 99;
+}
+#header .nav ul li .item:hover + .list {
+  display: block;
+}
+#header .nav ul li:not(.last)::after {
+  content: "";
+  display: inline-block;
+  width: 1px;
+  height: 10px;
+  margin: 11px 5px 0;
+  background-color: #ccc;
+}
+
+/*# sourceMappingURL=head.css.map */
