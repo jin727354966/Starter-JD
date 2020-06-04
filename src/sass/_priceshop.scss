@@ -1,0 +1,289 @@
+#priceshop{
+    margin-bottom: 20px;
+    &:after{
+        @extend %clear;
+    }
+    >div{
+        @include wh(305px,490px);
+        background-color: #fff;
+    }
+    /* 每日特价 */
+    .specials{
+        float: left;
+        .specials_title{
+            @include wh(60px,450px);
+            a{
+               margin-top: 12px;
+               float: left;
+            }
+            .specials_tab{
+                float: right;
+                margin-top: 20px;
+                a{
+                    font-size: 14px;
+                    line-height: 18px;
+                    margin: 0 13.5px;
+                   &.active{
+                       color: $tcolor;
+                       border-bottom: 2px solid $tcolor;
+                   } 
+                }
+            }
+        }
+        .specials_list{
+            @include wh(230px,470px);
+            margin: 0 10px 10px 10px;
+            .item{
+                .item_left{
+                    display: block;
+                    float: left;
+                    @include wh(235px,146px);
+                    margin-right: 10px;
+                    background-color: #f4f4f4;
+                    overflow: hidden;
+                    .pic{
+                        margin-top: 46px;
+                        text-align: center;
+                        img{
+                            @include wh(100px,100px);
+                        }
+                    }
+                    .describe{
+                        height: 80px;
+                        overflow: hidden;
+                        text-align: center;
+                        h3{
+                            margin-top: 9px;
+                            font-size: 14px;
+                            line-height: 19px;
+                            color: #333;
+                            white-space: nowrap;
+                            overflow: hidden;
+                            text-overflow: ellipsis;
+                        }
+                        p{
+                            margin:4px 0 8px 0;
+                            i{
+                                color: $tcolor;
+                            }
+                            u{
+                                color: $tcolor;
+                                font-size: 18px;
+                                font-weight: 600;
+                            }
+                            &>span{
+                                text-decoration: line-through;
+                            }
+                        }
+                        &>span{
+                            line-height: 18px;
+                            b{
+                                color: $tcolor;
+                            }
+                        }
+                    }
+                &:hover{
+                    h3{
+                        color: $tcolor;
+                    }
+                }
+            }
+            .item_right{
+                float: left;
+                width: 304px;
+                ul{
+                    width: 100%;
+                    &::after{
+                        @extend %clear;
+                    }
+                    li{
+                        float: left;
+                        @include wh(74px,146px);
+                        margin-left: 6px;
+                        a{
+                            display: block;
+                            @include wh(74px,146px);
+                            .pic{
+                                float: left;
+                                @include wh(74px,74px);
+                                position: relative;
+                                img{
+                                    @include wh(74px,74px);
+                                }
+                                span{
+                                    @include wh(16px,74px);
+                                    background: rgba($color: #000000, $alpha: .5);
+                                    color: #fff;
+                                    text-align: center;
+                                    position: absolute;
+                                    left: 0;
+                                    bottom: 0;
+                                }
+                            }
+                            .des{
+                                float: left;
+                                @include wh(74px,66px);
+                                padding-left: 6px;
+                                h4{
+                                    height: 32px;
+                                    color: $tColor;
+                                    line-height: 16px;
+                                    overflow: hidden;
+                                    font-size: 12px;
+                                    text-overflow: ellipsis;
+                                    word-break: break-all;
+                                    margin-bottom: 4px;
+                                }
+                                p{
+                                    color: $tcolor;
+                                    i{
+                                        font-weight: 600;
+                                        font-size: 14px;
+                                        line-height: 16px;
+                                    }
+                                }
+                                span{
+                                    font-size: 10px;
+                                    line-height: 14px;
+                                    text-decoration: line-through;
+                                }
+                            }
+                        }
+                        &.one{
+                            margin: 18px 0 48px 6px;
+                        }
+
+                    }
+                }
+            }
+        }
+    }
+    }
+    /* 闪购 */
+    .iflashbuy{
+        float: right;
+        
+        .iflashbuy_list{
+            height: 240px;
+            margin: 0 20px 0 10px;
+            text-align: center;
+            /* 左边 */
+            .iflashbuy_left{
+                float: left;
+                width: 230px;
+                height: 235px;
+                position: relative;
+                &:hover{
+                    opacity: .8;
+                }
+                &::after{
+                    content: "";
+                    background: linear-gradient(180deg,rgba(119,255,233,.05),rgba(0,93,70,.05));
+                    display: block;
+                    width: 230px;
+                    height: 235px;
+                    position: absolute;
+                    left: 0;
+                    top: 0;
+                }
+                .first{
+                    margin-top: 20px;
+                    width: 50px;
+                    height: 25px;
+                }
+                h3{
+                    margin-top: 6px;
+                    font-size: 16px;
+                    font-weight: 600;
+                    color: #333;
+                }
+                p{
+                    margin: 5px 0 13px 0;
+                    height: 18px;
+                    color: #666;
+                    span{
+                        color: rgba(102,102,102,.4);
+                        margin: 0 5px;
+                    }
+                    u{
+                        font-size: 11px;
+                        i{
+                            font-weight: 600;
+                        }
+                    }
+                }
+                .last{
+                    width: 110px;
+                    height: 100px;
+                }
+            }
+            /* 右边 */
+            .iflashbuy_right{
+                float: left;
+                width: 230px;
+                height: 278px;
+                margin-top: -43px;
+                li{
+                    &:hover{
+                        opacity: .8;
+                    }
+                    float: left;
+                    width: 114px;
+                    height: 60px;
+                    padding: 14px 0;
+                    position: relative;
+                    &.item::after{
+                        content: "";
+                        position: absolute;
+                        width: 1px;
+                        height: 48px;
+                        background: linear-gradient(180deg,white,#eeeeee,#eeeeee,white);
+                        right: 0;
+                        top: 0;
+                        bottom: 0;
+                        margin: auto 0;
+                    }
+                    a{
+                        display: block;
+                        width: 114px;
+                        height: 60px;
+                        text-align: center;
+                        img{
+                            width: 80px;
+                            height: 40px;  
+                        }
+                        p{
+                            font-size: 12px;
+                            color: #333;
+                        }
+                    }
+                }
+                
+            }
+        }
+    }
+}
+.title_wrap{
+    overflow: hidden;
+    height: 60px;
+    padding: 0 20px;
+    .title{
+        margin-top: 12px;
+        display: block;
+        @include flcw(24px,32px,$tColor,550);
+        // @include flc(24px,32px,$tColor);
+        i{
+            margin-left: 10px;
+            display: inline-block;
+            @include wh(16px,16px);
+            background:url(../images/sprite.png) no-repeat -16px 0px;
+            background-size: 32px 32px;
+        }
+        &:hover{
+            color: unset;
+            i{
+              background-position: 0px 0px;  
+            }
+        }
+    }
+}

@@ -2,8 +2,8 @@
     @include wh(491px,1057px);
     background: url(http://img12.360buyimg.com/babel/s2114x982_jfs/t1/135660/10/900/182054/5ed34706E5e196a76/dfe61c8f66fde462.jpg!cc_1057x491.webp);
     background-size: cover;
-    margin: 0 auto;
-    margin-top: 30px;
+    margin: 30px auto;
+    
     a{
         display: block;
         @include wh(116px,1057px);
@@ -24,6 +24,11 @@
                     @include wh(173px,158.5px);
                     margin: 0 8px 8px 0;
                     background-color: red;
+                    &:hover{
+                        .imgw{
+                            opacity: 0.4;
+                        }
+                    }
                     a{
                         display: flex;
                         flex-direction: column;
@@ -32,6 +37,10 @@
                         @include wh(173px,158.5px);
                         background: url(http://img12.360buyimg.com/img/s380x420_jfs/t1/111610/39/3394/6521/5ea7a45aE291dbf97/188d427421f6f3fe.png!cc_190x210.webp);
                         background-size: cover;
+                        position: relative;
+                        &:hover .imgw{
+                            opacity: 0.4;
+                        }
                         .imgw{
                             @include wh(108px,108px); 
                             img{
@@ -50,16 +59,33 @@
                         span{
                             font-size: 13.3px;
                             color: #de452b;
-                            margin-bottom: 2px;
+                            margin-bottom: 6px;
                         }
+                        
                     }
                 }
             }
         }
         .goods_r{
-            @include wh(364px,158px);
-            background-color: blue;
+            width: 158px;
+            // @include wh(354px,158px);
             float: left;
+            li{
+                margin-bottom: 8px;
+                a{
+                    display: block;
+                    @include wh(82.5px,158px);
+                    
+                    img{
+                        @include wh(82.5px,158px);
+                    }
+                    &:hover{
+                        img{
+                            opacity: .9;
+                        }
+                    }
+                }
+            }
         }
     }
 }

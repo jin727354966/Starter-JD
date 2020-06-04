@@ -1,0 +1,128 @@
+#findgood{
+    .findwrap{
+    height: 260px;
+    width: 800px;
+    margin: 0 auto;
+    margin-left: 190px;
+    position: relative;
+    .left{
+        position: absolute;
+        left: -190px;
+        top: 0;
+        a{
+            display: block;
+            width: 190px;
+            height: 260px;
+            background: url(../images/beij.png);
+            background-size: cover;
+            overflow: hidden;
+            &:hover{
+                .til i{
+                    background-position: 0 0;
+                }
+            }
+            .til{
+                margin: 0 auto;
+                width: 160px;
+                height: 90px;
+                margin-top: 15px;
+                overflow: hidden;
+                background: url(../images/findgond.png);
+                p{
+                    margin: 50px 0 0 20px;
+                    font-size: 16px;
+                    line-height: 20px;
+                    color: #fff;
+                    i{
+                        display: inline-block;
+                        width: 16px;
+                        height: 16px;
+                        vertical-align: middle;
+                        margin-left: 5px;
+                        background: url(../images/sprite.png) no-repeat 0 -16px;
+                        background-size: 32px 32px;
+                    }
+                }
+            }
+        }
+    }
+    /* 发现好货轮播 */
+    .fglb_wrap{
+        background-color: #fff;
+        margin-left: 10px;
+        width: 790px;
+        height: 260px;
+        position: relative;
+        overflow: hidden;
+        /* 移动的产品 */
+        .fglb{width: 2000px;
+            height: 100%;
+            position: absolute;
+            left: 0;
+            top: 0;
+            overflow: hidden;
+            a{
+                
+                &:hover{
+                    p{
+                        color: $tcolor;
+                    }
+                }
+                display: inline-block;
+                width: 150px;
+                height: 180px;
+                
+                img{
+                    width: 150px;
+                    height: 150px;
+                }
+                p{
+                    width: 150px;
+                    height: 20px;
+                    font-size: 14px;
+                    line-height: 20px;
+                    color: #333;
+                    @include ellipsis(); 
+                    
+                }
+            }
+            .odd{
+                margin: 50px 50px 0 0;
+                p{
+                    margin-bottom: 10px;
+                }
+            }
+            .even{
+                vertical-align: top;
+                margin: 20px 50px 0 0;
+                p{
+                    margin-top: 10px;
+                }
+            }
+        }
+        /* 精度条 */
+        .progressbar{
+            display: none;   //隐藏
+            width: 760px;
+            height: 3px;
+            background-color: #f3f3f3;
+            position: absolute;
+            bottom: 10px;
+            right: 0;
+            left: 0;
+            margin: 0 auto;
+            .bar{
+                width: 75px;
+                height: 9px;
+                background-color: #d8d8d8;
+                border-radius: 4.5px;
+                position: absolute;
+                left: 0;
+                top: 50%;
+                transform: translateY(-50%);
+            }
+        }
+
+    }
+    }
+}

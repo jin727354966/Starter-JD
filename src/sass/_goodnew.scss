@@ -1,0 +1,347 @@
+#goodnew{
+    margin-top: 20px;
+    &::after{
+        @extend %clear;
+    }
+    &>div{
+        float: left;
+        width: 240px;
+        height: 305px;
+        margin-right: 10px;
+        background-color: #fff;
+    }
+    /* 新品发布 */
+    .issue{
+        background:white url(../images/scril.png) no-repeat 50% 50%;
+        background-size: cover;
+        .issue_lb{
+            .lb_wrap{
+                width: 220px;
+                height: 215px;
+                padding: 0 10px;
+                position: relative;
+                overflow: hidden;
+                /* 移动的图片容器 */
+                .picwrap{
+                    position: absolute;
+                    left: -50px;
+                    top: 0;
+                    width: 1000px;
+                    &::after{
+                        @extend %clear;
+                    }
+                    .active{
+                        width: 130px;
+                        height: 229px;
+                        margin-top: 0;
+                        .imgpic{
+                            width: 120px;
+                            height: 120px;
+                            img{
+                                width: 120px;
+                                height: 120px;
+                            }
+                        }
+                        .deg{
+                            display: block;
+                        }
+                    }
+                    a{
+                        margin-top:20px;
+                        display: block;
+                        float: left;
+                        width: 104px;
+                        height: 183px;
+                        text-align: center;
+                        // position: relative;
+                        .imgpic{
+                            width: 96px;
+                            height: 96px;
+                            img{
+                                width: 96px;
+                                height: 96px; 
+                            }
+                        }
+                        .deg{
+                            display: none;
+                            h3{
+                                @include ellipsis();
+                                font-size: 14px;
+                                line-height: 19px;
+                                color: #333;
+                                width: 200px;
+                                height: 18px;
+                                margin: 8px 0 10px -28px;
+                                margin-left: -28px;
+                                margin-bottom: 10px;
+                            }
+                            p{
+                                font-size: 12px;
+                                list-style: 16px;
+                                margin-bottom: 20px;
+                            }
+                            span{
+                                color: $tcolor;
+                                font-size: 10px;
+                                i,u{
+                                    font-size: 18px;
+                                }
+                            }
+                        }
+                        
+                    }
+                }
+            }
+        }
+    }
+    /* 排行榜 */
+    .ranking{
+        /* 切换按钮 */
+        .ranking_tab{
+            .btn{
+                text-align: center;
+            button{
+                margin: 0 4px;
+                width: 62px;
+                height: 20px;
+                border-radius: 10px;
+                border: 0;
+                color: #999;
+                text-align: center;
+                line-height: 20px;
+                background-color: #f6f6f6;
+                &.active{
+                    background-color: $thovColor;
+                    color: #fff;
+                }
+            }
+
+            }
+        }
+        /* 切换内容容器 */
+        .ranking_list{
+            margin-top: 10px;
+            .item{
+                ul{
+                    li{
+                        margin: 0 0 10px 10px;
+                        width: 220px;
+                        height: 60px;
+                        a{
+                            &:hover{
+                                opacity: .8;
+                                p{
+                                    color: $thovColor;
+                                }
+                            }
+                            display: block;
+                            width: 60px;
+                            height: 100%;
+                            padding: 0 120px 0 40px;
+                            position: relative;
+                            img{
+                                width: 60px;
+                                height: 60px;
+                            }
+                            .one{
+                                background: url(../images/one.png) no-repeat 0 0;
+                                background-size: contain;
+                                p{
+                                    color: #e6ac36;
+                                }
+                            }
+                            .two{
+                                background: url(../images/two.png) no-repeat 0 0;
+                                background-size: contain;
+                                p{
+                                    color: #b3aea4;
+                                }
+                            }
+                            .tree{
+                                background: url(../images/tree.png) no-repeat 0 0;
+                                background-size: contain;
+                                p{
+                                    color: #d47b45;
+                                }
+                            }
+                            h3{
+                                position: absolute;
+                                left: 0px;
+                                bottom: 3px;
+                                width: 29px;
+                                height: 40px;
+                                text-align: center;
+                                font-weight: 700;
+                                // background-size: cover;
+                                p{
+                                    font-size: 12px;
+                                    text-align: center;
+                                    height: 16px;
+                                    line-height: 16px;
+                                }
+                                span{
+                                    font-size: 18px;
+                                    line-height: 18px;
+                                    color: #fff; 
+                                }
+                            }
+                            &>p{
+                                @include noelli();
+                                position: absolute;
+                                left: 110px;
+                                top: 18px;
+                                width: 100px;
+                                height: 31px;
+                                line-height: 15px;
+                                color: $tColor;
+                            }
+                            
+                        }
+                    }
+                }
+            }
+        }
+    }
+    /* 逛好店 */
+    .stroll{
+        .stroll_list{
+            margin: 0 10px;
+            a{
+                display: block;
+                padding: 17px 115px 15px 15px;
+                width: 90px;
+                height: 81px;
+                position: relative;
+                &:hover{
+                    opacity: .8;
+                }
+                &.strollone{
+                    background: url(../images/haob.png) no-repeat 0 0;
+                    background-size: contain;
+                    margin-bottom: 9px;
+                }
+                &.strolltwo{
+                    background: url(../images/baobw.png) no-repeat 0 0;
+                    background-size: contain;
+                }
+                .pic{
+                    padding: 5px;
+                    width: 75px;
+                    height: 75px;
+                    position: absolute;
+                    right: 15px;
+                    top: 50%;
+                    transform: translateY(-50%);
+                    img{
+                        width: 75px;
+                        height: 75px;
+                    }
+                }
+                .meg{
+                    h3{
+                        width: 90px;
+                        height: 28px;
+                        color: #333;
+                        font-size: 12px;
+                    }
+                    p{
+                        margin-top: 5px;
+                        margin-bottom: 14px;
+                        span{
+                            display: inline-block;
+                            color: #e2231a;
+                            border: 1px solid #e2231a;
+                            padding:0 2px;
+                            border-radius: 2px;
+                        }
+                    }
+                    span{
+                        color: #999;
+                    }
+                }
+            }
+        }
+    }
+    /* 领券中心 */
+    .coupon{
+        margin-right: 0;
+        .coupon_list{
+            width: 240px;
+            height: 245px;
+            background: url(../images/table.png) no-repeat 0 0;
+            background-size: contain;
+            .item{
+                width: 220px;
+                margin: 0 auto;
+                a{
+                    &:hover{
+                        .right{
+                            color: $tcolor;
+                            p{
+                                color: $tcolor;
+                            }
+                        }
+                    }
+                    width: 180px;
+                    display: block;
+                    position: relative;
+                    padding-right: 40px;
+                    height: 72px;
+                    margin-bottom: 3px;
+                    .left{
+                        padding: 7px 0 0 16px;
+
+                        h2{
+                            height: 24px;
+                            font-size: 14px;
+                            line-height: 24px;
+                            color: $tcolor;
+                            i{
+                                font-size: 20px;
+                            }
+                        }
+                        h3{
+                            font-size: 12px;
+                            color: #999;
+                            line-height: 18px;
+                            height: 18px;
+                        }
+                        p{
+                            width: 164px;
+                            @include ellipsis();
+                            line-height: 18px;
+                            color: #333;
+                        }
+                    }
+                    .right{
+                        position: absolute;
+                        width: 40px;
+                        height: 100%;
+                        right: 0;
+                        top: 0;
+                        p{
+                            width: 1px;
+                            height: 60px;
+                            line-height: 15px;
+                            font-size: 12px;
+                            color: #666;
+                            position: relative;
+                            left: 4px;
+                            top: 50%;
+                            transform: translateY(-50%);
+                        }
+                        .iconfont{
+                            position: absolute;
+                            width: 12px;
+                            height: 72px;
+                            text-align: center;
+                            right: 9px;
+                            top: 0;
+                            line-height: 72px;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

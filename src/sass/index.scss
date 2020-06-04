@@ -5,6 +5,7 @@ $color: #999; //普通文字颜色
 $thovColor:#c81623;    //菜单划入颜色
 $tColor: #333;//标题文字颜色  菜单颜色
 $tfontSize: 15px;//标题文字大小
+$tcolor:#e1251b;
 // $width:610/3+"px";
 @mixin borderstyle($style:solid,$size:1px,$color:#ccc){
     border:$style $size $color;
@@ -23,6 +24,20 @@ $tfontSize: 15px;//标题文字大小
     white-space: nowrap;
     overflow: hidden;
     text-overflow: ellipsis;
+}
+@mixin melli($num:2){  //多行省略号
+    word-break: break-all;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    display: -webkit-box;
+    -webkit-line-clamp: $num;
+    -webkit-box-orient:vertical;
+}
+@mixin noelli{//没有省略号
+    overflow: hidden;
+    font-size: 12px;
+    text-overflow: ellipsis;
+    word-break: break-all;
 }
 @mixin opacityvalue($value:0.3) {
     //设置参数，添加默认值
@@ -52,6 +67,17 @@ $tfontSize: 15px;//标题文字大小
     color:$c;
     text-align: $ta;
 }
+@mixin flc($fs,$lh,$c:#fff){//字体 行高 颜色
+    font-size: $fs;
+    line-height:$lh;
+    color:$c;
+}
+@mixin flcw($fs,$lh,$c:#fff,$fw:800){//字体 行高 颜色
+    font-size: $fs;
+    line-height:$lh;
+    color:$c;
+    font-weight: $fw;
+}
 @mixin flw($fs,$lh,$fw:800){//字体 行高 加粗
     font-size: $fs;
     line-height:$lh;
@@ -73,6 +99,12 @@ $tfontSize: 15px;//标题文字大小
     visibility: hidden;
     clear: both;
 }
+%pic{
+    content: ".";
+    height: 100%;
+    display: inline-block;
+    vertical-align: middle;
+}
 %lunbobtn{
     position: absolute;
     top: 50%;
@@ -84,6 +116,16 @@ $tfontSize: 15px;//标题文字大小
     content:"";
     background: linear-gradient(270deg,white,#eeeeee,#eeeeee,white);
     
+}
+%bg{
+    content: "";
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 25px;
+    height: 20px;
+    background-image: url(../images/title.png);
+    background-size: 50px 20px;
 }
 @mixin product($url){
     @include wh(28px,28px);
@@ -101,6 +143,10 @@ $tfontSize: 15px;//标题文字大小
     font-family: iconfont,sans-serif;
     color: #9f9f9f;
 }
+/* 鼠标移入显示灰灰的 */
+.hac:hover{
+    opacity: .8;
+}
 /* 自定义字体文件引入 */
 @font-face{font-family:impact;src:url(../font/b07c9855bd807ccc9d825cb0392c6ef8.woff) format("woff");font-weight:400;font-style:normal}
 @font-face{font-family:fzzzh;src:url(//misc.360buyimg.com/mtd/pc/index_2019/1.0.0/fonts/f7001cef4a64d1b77d0cd4dfc670cc35.woff) format("woff");font-weight:400;font-style:normal}
@@ -110,3 +156,8 @@ $tfontSize: 15px;//标题文字大小
 @import 'lunbo';
 @import 'seckill';
 @import 'activity';
+@import 'priceshop';
+@import 'findgood';
+@import 'goodnew';
+@import 'channel';
+@import 'recommend';
