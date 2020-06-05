@@ -1,0 +1,336 @@
+#listmain_list{
+    position: relative;
+    .list_options{
+        margin-bottom: 5px;
+        padding-left: 190px;
+        /* 综合选择 */
+        .synthesize{
+            border-top: 1px solid #ccc;
+            border-bottom: 1px solid #ccc;
+            height: 25px;
+            background-color: #DDD;
+            font-size: 0;
+            padding: 6px 9px;
+            position: relative;
+            button{
+                line-height: 23px;
+                color: #333;
+                padding: 0 8px;
+                border: 1px solid #CCC;
+                background-color: #fff;
+                &:hover{
+                    color: #e4393c;
+                    border-color: #e4393c;
+                    i{
+                        background-position: 0px -139px;
+                    }
+                }
+                i{
+                    margin-left: 3px;
+                    display: inline-block;
+                    width: 7px;
+                    height: 13px;
+                    vertical-align: middle;
+                    background: url(../images/spritejian.png) no-repeat 0px -99px;
+                }
+            }
+            /* 价格区间 */
+            .section{
+                display: inline-block;
+                font-size: 12px;
+                position: relative;
+                &:hover{
+                    border: 1px solid #ccc;
+                    
+                }
+                input{
+                    width: 52px;
+                    height: 17px;
+                    padding: 3px;
+                    border: 1px solid #CCC;
+                    outline-color: transparent;
+                }
+                /* 隐藏部分 */
+                .choice{
+                    display: none;
+                    width: 132px;
+                    height: 25px;
+                    padding: 37px 6px 6px;
+                    border: 1px solid #999;
+                    position: absolute;
+                    left: 0;
+                    top: 24px;
+                    span{
+                        color: #005aa0;
+                        line-height: 25px;
+                    }
+                    p{
+                        text-align: center;
+                        display: inline-block;
+                        border: 1px solid #999;
+                        width: 38px;
+                        background-color: #f7f7f7;
+                        margin-left: 62px;
+                        height: 17px;
+                        line-height: 17px;
+                        padding: 3px;
+                        color: #333;
+                    }
+                }
+            }
+            .synthesize_count{
+                font-size: 0;
+                position: absolute;
+                right: 10px;
+                top: 7px;
+                
+                color: #333;
+                line-height: 25px;
+                p{
+                    font-size: 12px;
+                    float: left;
+                    i{
+                        color: #666;
+                    }
+                    strong{
+                        font-weight: 700;
+                        color: #e4393c;
+                    }
+                }
+                .count{
+                    color: #666;
+                }
+                .btn{
+                    width: 46px;
+                    height: 23px;
+                    border: 1px solid #666;
+                    font-size: 14px;
+                    line-height: 23px;
+                    text-align: center;
+                    background-color: #fff;
+                    margin: -1px -1px 0 0;
+                    font-family: "\5b8b\4f53";//字体
+                }
+            }
+        }
+    }
+    .list_goods{
+        padding-left: 190px;
+        /* 列表产品 */
+        .goods_wrap{
+            overflow: hidden;
+            margin-bottom: 20px;
+            ul{
+                width: 840px;
+                li{
+                    float: left;
+                    width: 240px;
+                    height: 474px;
+                    padding: 38px 9px 10px;
+                    border: 1px solid #fff;
+                    box-sizing: border-box;
+                    margin-right: 40px;
+                    &:hover{
+                        border-color: #f1f1f1;
+                        box-shadow: 0px 0px 2px #f1f1f1;
+                    }
+                    &>a{
+                        display: block;
+                    }
+                    /* 图片 */
+                    .goodpic{
+                        width: 220px;
+                        height: 220px;
+                        margin-bottom: 15px;
+                        img{
+                            width: 100%;
+                            height: 100%;
+                        }
+                    }
+                    /* 价格 */
+                    &>p{
+                        font-size: 20px;
+                        color: #e4393c;
+                        line-height: 22px;
+                        margin-bottom: 8px;
+                    }
+                    /* 标题 */
+                    .headline{
+                        margin-bottom: 8px;
+                        h4{
+                            color: #666;
+                            font-size: 12px;
+                            line-height: 22px;
+                            @include noelli();
+                            height: 22px;
+                            width: 220px;
+                            &:hover{
+                                color: #e4393c;
+                            }
+                        }
+                        h5{
+                            height: 22px;
+                            width: 185px;
+                            color: #ffaa71;
+                            line-height: 20px;
+                            @include noelli();
+                        }
+                    }
+                    /* 评论 选购 */
+                    .comment{
+                        margin-bottom: 8px;
+                        &::after{
+                            @extend %clear;
+                        }
+                        i{
+                            color: #646fb0;
+                            font-weight: 600;
+                        }
+                        .comment-l{
+                            float: left;
+
+                        }
+                        .comment-r{
+                            float: right;
+                        }
+                    }
+                    /* KKTV */
+                    .television{
+                        &>a{
+                            display: inline-block;
+                            margin-right: 9px;
+                            &:nth-child(1){
+                                @include ellipsis();
+                                width: 122px;
+                                height: 18px;
+                                line-height: 18px;
+                            }
+                            &:nth-child(2){
+                                width: 16px;
+                                height: 16px;
+                                background: url(../images/service.png) no-repeat 0 0;
+                                background-size: contain;
+                            }
+                        }
+                    }
+                    /* 自营标志 */
+                    .sign{
+                        width: 24px;
+                        height: 16px;
+                        background-color: #e23a3a;
+                        color: #fff;
+                        border-radius: 2px;
+                    }
+                    /* 对比 关注 加入购物车 */
+                    .trolley{
+                        margin-top: 12px;
+                        font-size: 0;
+                        &>a{
+                            display: inline-block;
+                            // width: 28px;
+                            height: 25px;
+                            font-size: 12px;
+                            padding: 0 3px 0 24px;
+                            line-height: 25px;
+                            border: 1px solid #ddd;
+                            vertical-align: middle;
+                            position: relative;
+                            margin: -1px -1px 0 0;
+                            i{
+                                display: inline-block;
+                                width: 12px;
+                                height: 12px;
+                                border: 1px solid #ddd;
+                                position: absolute;
+                                left: 4px;
+                                top: 5px;
+                            }
+                            u{
+                                display: inline-block;
+                                width: 18px;
+                                height: 18px;
+                                position: absolute;
+                                left: 4px;
+                                top: 5px;
+                                background-image: url(../images/jiantou.png);
+                                background-repeat: no-repeat;
+                                &.attention{
+                                    background-position: 0 -414px;
+                                }
+                                &.scart{
+                                    background-position: 0 -272px;
+                                }
+                            }
+                            &:hover{
+                                border-color: #e4393c;
+                                z-index: 1;
+                                .attention{
+                                    transition:background-position 1s;
+                                    background-position: 0 -437px;  
+                                }
+                                
+                            }
+                        }
+                        .trolley_cart{
+                            color: #e4393c;
+                            
+                        }
+                    }
+                }
+            }
+        }
+        /* 分页  移动到一定位置再显示 */
+        .paging_wrap{
+            margin-bottom: 50px;
+            &::after{
+                @extend %clear;
+            }
+            .paging{
+                float: right;
+                a{
+                    display: inline-block;
+                    padding: 0 14px;
+                    border: 1px solid #ddd;
+                    margin:0 2px;
+                    color: #333;
+                    font-size: 14px;
+                    line-height: 36px;
+                    i{
+                        font-family: "\5b8b\4f53";
+                    }
+                    &.stopword{
+                        color: #ccc;
+                    }
+                    &.active{
+                        border: 0;
+                        color: #e23a3a;
+                    }
+                }
+                span{
+                    color: #ccc;
+                    line-height: 36px;
+                    font-size: 14px;
+                    font-weight: 700;
+                    margin: 0 10px;
+                }
+                .paging_l{
+                    float: left;
+
+                }
+                .paging_r{
+                    float: right;
+                    font-size: 12px;
+                    color: #999;
+                    margin-left: 30px;
+                    strong{
+                        font-size: 14px;
+                        line-height: 36px;
+                        font-weight: 700;
+                    }
+                }
+            }
+        }
+        
+    }
+}
+    

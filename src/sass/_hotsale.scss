@@ -1,0 +1,115 @@
+#hotsale{
+    background-color: #f1f1f1;
+    position: relative;
+    .hotsale_wrap{
+        width: 700px;
+        margin: 0 210px 0 80px;
+        p{
+            width: 30px;
+                height: 60px;
+                padding: 20px 10px 0 5px;
+                background: url(../images/listqi.png) no-repeat 0 0;
+                background-size: contain;
+                font-size: 14px;
+                line-height: 18px;
+                color: #f60;
+                position: absolute;
+        }  
+        .hotsale_list{
+            overflow: hidden;
+            ul{
+                &::after{
+                    @extend %clear;
+                }
+                margin-top: 15px;
+                li{
+                    float: left;
+                    width: 264px;
+                    height: 100px;
+                    padding: 11px;
+                    background-color: #fff;
+                    margin: 0 20px 15px 10px;
+                    &>a{
+                        float: left;
+                        width: 100px;
+                        height: 100px;
+                        margin-right: 10px;
+                        img{
+                            width: 100%;
+                            height: 100%;
+                        }
+                    }
+                    &>div{
+                        float: left;
+                        &>a{
+                            display: block;
+                            width: 154px;
+                            height: 40px;
+                            padding-top: 5px;
+                            margin-bottom: 5px;
+                            h4{
+                                width: 100%;
+                                height: 100%;
+                                font-size: 12px;
+                                line-height: 20px;
+                                color: #666;
+                                @include noelli();
+                            }
+                        }
+                        &>span{
+                            font-size: 12px;
+                            line-height: 20px;
+                            color: #e4393c;
+                            font-weight: 600;
+                        }
+                        .car{
+                            padding-top: 3px;
+                            height: 27px;
+                            a{
+                                display: inline-block;
+                                padding: 4px 13px 5px;
+                                border: 1px solid #DDD;
+                                border-radius: 2px;
+                                color: #666;
+                                text-align: center;
+                                line-height: 14px;
+                                background-color: #f7f7f7;
+                            }
+                        }
+                    }
+                }
+            }
+            p{
+                left: 25px;
+                top: 0;
+            }
+        }
+        .hotsale_meg{
+            width: 200px;
+            height: 152px;
+            position: absolute;
+            right: 0;
+            top: 0;
+            &>p{
+                left: -52px;
+                top: 0;
+            }
+            ul{
+                margin: 15px 10px 0 0;
+                li{
+                    width: 165px;
+                    height: 22px;
+                    @include ellipsis();
+                    color: #666;
+                    margin-bottom: 5px;
+                    font-weight: 700;
+                    line-height: 22px;
+                    a{
+                        color: #666;
+                        font-weight: normal;
+                    }
+                }
+            }
+        }
+    }
+}

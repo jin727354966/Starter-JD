@@ -1,0 +1,95 @@
+#detail_nav{
+    background-color: #e3e4e5;
+    &::after{
+        @extend %clear;
+    }
+    .nav_l{
+        padding: 13px 0 9px 0;
+        float: left;
+        .sep {
+            font-family: simsun;
+            padding: 0 3px;
+        }
+        strong{
+            display: inline-block;
+            font-size: 12px;
+            line-height: 20px;
+            background-color: #fff;
+            color: #333;
+            padding: 0 3px;
+            padding-right: 30px;
+            border: 1px solid #999;
+            vertical-align: middle;
+            position: relative;
+            u{
+                position: absolute;
+                right: 5px;
+                top: 50%;
+                transform: translateY(-50%);
+                width: 13px;
+                height: 7px;
+                background: url(../images/arr-close.png) no-repeat 0 0;
+                background-size: contain;
+                margin-left: 10px;
+                
+            }
+            &:hover u{
+                transition: .4s;
+                transform:translateY(-50%) rotate(180deg);
+            }
+        }
+        b{
+            display: inline-block;
+            width: 120px;
+            height: 20px;
+            @include ellipsis();
+            vertical-align: middle;
+            line-height: 20px;
+        }
+    }
+    .nav_r{
+        padding-top: 13px;
+        float: right;
+        ul{
+            li{
+                margin-right: 10px;
+                float: left;
+                color: #666;
+                margin-top: 3px;
+                i{
+                    display: inline-block;
+                    width: 16px;
+                    height: 16px;
+                    background-image: url(../images/ssprite.png);
+                    background-repeat: no-repeat;
+                    vertical-align: middle;
+                    margin-right: 5px;
+                    &.rel{
+                        background-position: -34px -16px;
+                    }
+                    &.att{
+                        background-position: -34px 0;
+                    }
+                }
+               &.pic{
+                   position: relative;
+                   img{
+                       width: 78px;
+                       height: 18px;
+                   }
+                   .pledge{
+                       display: none;
+                       position: absolute;
+                        left: 50%;
+                        top: 23px;
+                        transform: translateX(-50%);
+                        width: 256px;
+                        height: 249px;
+                        background: url(../images/goodshop-hover.png) no-repeat 0 0;
+                }
+               }
+               
+            }
+        }
+    }
+}

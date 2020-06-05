@@ -1,0 +1,43 @@
+#management{
+    .management_wrap{
+        &::after{
+            @extend %clear;
+        }
+        padding: 15px 0 5px;
+        border-bottom: 1px solid #DDD;
+        &>div{
+            float: left;
+        }
+        .variety{
+            a{
+                font-size: 18px;
+                line-height: 24px;
+                font-weight: 700;
+                color: #666;
+                vertical-align: top;
+            }
+            .crumbs-arrow{
+                line-height: 24px;
+                vertical-align: top;
+                // color: ;
+            }
+        }
+        .options{
+            padding: 0 4px 0 8px;
+            line-height: 22px;
+            color: #666;
+            border: 1px solid #DDD;
+            margin-right: 22px;
+            i{
+                display: inline-block;
+                width: 16px;
+                height: 16px;
+                margin: 0 2px 0 4px;
+                background: url(../images/jiantou.png) no-repeat 0 9px;
+            }
+        }
+        &>button{
+            float: left; 
+       }
+    }
+}
