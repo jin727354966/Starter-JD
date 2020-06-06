@@ -1,7 +1,12 @@
 #commodity{
     padding-top: 5px;
+    
     // 左边放图片的地方
+    &::after{
+        @extend %clear;
+    }
     .commoditypic{
+        float: left;
         // 大图跟小图的的容器
         .picwrap{
             width: 352px;
@@ -20,8 +25,9 @@
                         height: 100%;
                     }
                 }
-                /* 遮罩 */
+                /* 遮罩 遮罩的宽要js计算得出  通过比例*/
                 .shadow{
+                    display: none;
                     width: 50px;
                     height: 50px;
                     background-color: rgba($color: #ff0, $alpha: .4);
@@ -31,6 +37,7 @@
                 }
                 /* 巨大的图盒子 */
                 .bbimg{
+                    display: none;
                     position: absolute;
                     left: 353px;
                     top: 0;
@@ -44,32 +51,43 @@
         }
         /* 小图 */
         .littlepic{
-            width: 308px;
+            width: 290px;
             height: 54px;
             margin-bottom: 18px;
             padding: 0 22px;
             position: relative;
             overflow: hidden;
-            ul{
-                width: 432px;
-                &::after{
-                    @extend %clear;
-                }
-                li{
-                    float: left;
-                    img{
-                        width: 50px;
-                        height: 50px;
-                        border:2px solid #fff;
+            /* 小图容器，用与隐藏超出的图片 */
+            .lpicwrap{
+                width: 290px;
+                height: 54px;
+                overflow: hidden;
+                /* 移动的小图ul */
+                ul{
+                    width: 432px;
+                    height: 54px;
+                    overflow: hidden;
+                    &::after{
+                        @extend %clear;
                     }
-                    &:hover{
+                    li{
+                        float: left;
+                        margin: 0 2px;
                         img{
-                            border-color: #e53e41;
-                            z-index: 1;
+                            width: 50px;
+                            height: 50px;
+                            border:2px solid #fff;
+                        }
+                        &:hover{
+                            img{
+                                border-color: #e53e41;
+                                z-index: 1;
+                            }
                         }
                     }
                 }
             }
+            /* 按钮 */
             span{
                 position: absolute;
                 top: 50%;

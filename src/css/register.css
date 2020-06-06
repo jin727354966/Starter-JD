@@ -1,0 +1,174 @@
+@charset "UTF-8";
+#head::after {
+  content: "";
+  height: 0;
+  display: block;
+  overflow: hidden;
+  visibility: hidden;
+  clear: both;
+}
+
+.container {
+  width: 990px;
+  margin: 0 auto;
+}
+
+#head::after {
+  padding-top: 20px;
+}
+#head .registerlogo {
+  float: left;
+}
+#head .registerlogo a {
+  display: block;
+  width: 170px;
+  height: 60px;
+}
+#head .registerlogo a img {
+  width: 100%;
+  height: 100%;
+}
+#head .qus {
+  float: right;
+  margin-top: 50px;
+}
+#head .qus b {
+  display: inline-block;
+  width: 18px;
+  height: 14px;
+  margin: 0 4px;
+  vertical-align: middle;
+  background: url(http://misc.360buyimg.com/user/passport/1.0.0/css/i/q-icon.png) no-repeat;
+}
+
+#hint {
+  padding: 10px 0;
+  background-color: #fff8f0;
+}
+#hint p {
+  text-align: center;
+  color: #999;
+}
+#hint p i {
+  display: inline-block;
+  width: 16px;
+  height: 16px;
+  vertical-align: middle;
+  margin-right: 3px;
+  background: url(../images/icon-tips.png) no-repeat 0 0;
+}
+#hint p a {
+  color: #666;
+}
+
+/* 注册 */
+#enroll {
+  background-color: #e93854;
+}
+
+.enrollwrap {
+  height: 475px;
+  position: relative;
+  background: url(http://img11.360buyimg.com/da/jfs/t16363/164/2298198848/33213/870500f1/5aa68632Nd7790d0c.png) no-repeat 0 0;
+  background-size: contain;
+}
+.enrollwrap .formwrap {
+  position: absolute;
+  right: 10px;
+  top: 10px;
+  width: 306px;
+  padding: 20px;
+  background-color: #fff;
+}
+.enrollwrap .formwrap .title {
+  height: 54px;
+  font-size: 22px;
+  line-height: 54px;
+  text-align: center;
+  border-bottom: 1px solid #ddd;
+}
+.enrollwrap .formwrap p {
+  margin: 10px 0px;
+}
+.enrollwrap .formwrap .errormsg {
+  display: none;
+  font-size: 12px;
+  line-height: 18px;
+  background-color: #ffebeb;
+  border: 1px solid #faccc6;
+  margin: 5px 0;
+  padding: 0 10px;
+  color: #e4393c;
+}
+.enrollwrap .formwrap .item {
+  position: relative;
+  width: 304px;
+  padding: 10px 0;
+  border: 1px solid #bdbdbd;
+  border-left: 0;
+}
+.enrollwrap .formwrap .item label {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 38px;
+  height: 38px;
+  text-align: center;
+  line-height: 38px;
+  color: #666;
+  font-weight: 800;
+  border-left: 1px solid #bdbdbd;
+  border-right: 1px solid #bdbdbd;
+}
+.enrollwrap .formwrap .item input {
+  margin-left: 40px;
+  width: 250px;
+  height: 18px;
+  outline-color: transparent;
+  border: 0;
+  text-indent: 10px;
+}
+.enrollwrap .formwrap .item i {
+  position: absolute;
+  right: 10px;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 14px;
+  height: 14px;
+  background: url(../images/pwd-icons-new.png) no-repeat 0 -145px;
+}
+.enrollwrap .formwrap .userp {
+  margin-top: 20px;
+}
+.enrollwrap .formwrap .userp label {
+  background: url(../images/pwd-icons-new.png) 0 0px;
+}
+.enrollwrap .formwrap .pass label {
+  background: url(../images/pwd-icons-new.png) -48px 0px;
+}
+.enrollwrap .formwrap .forget {
+  height: 20px;
+  position: relative;
+}
+.enrollwrap .formwrap .forget a {
+  position: absolute;
+  right: 5px;
+  top: 50%;
+  color: #ccc;
+  transform: translateY(-50%);
+}
+.enrollwrap .formwrap .forget input {
+  vertical-align: middle;
+}
+.enrollwrap .formwrap .cdown input {
+  width: 304px;
+  height: 33px;
+  background-color: #e93854;
+  font-size: 22px;
+  line-height: 33px;
+  text-align: center;
+  color: #fff;
+  border: 0;
+}
+
+/*# sourceMappingURL=register.css.map */

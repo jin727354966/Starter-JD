@@ -1,0 +1,227 @@
+.favorable{
+    float: left;
+    width: 590px;
+    margin-left: 30px;
+    
+    .titleprice{
+        padding-bottom: 20px;
+        border-bottom: 1px dashed #ddd;
+    }
+    
+    .detail_title{
+        padding-top: 10px;
+        margin-bottom: 5px;
+        font-size: 16px;
+        line-height: 28px;
+        color: #666;
+    }
+    .trait{
+        margin-bottom: 5px;
+        h3{
+            color: #e4393c;
+            font: 12px/150% tahoma,arial,Microsoft YaHei,Hiragino Sans GB,"\u5b8b\u4f53",sans-serif;
+
+        }
+        a{
+            color: #5e69ad;
+            text-decoration: underline;
+        }
+    }
+    /* 活动横幅 */
+    .activity_banner{
+        height: 32px;
+        background: url(http://m.360buyimg.com/cc/jfs/t1/118924/16/7277/31844/5ec22e41E568179dd/cd7fc290bd4d8724.png) no-repeat 0 0;
+    }
+    /* 价格 +促销  有背景色*/
+    .detail_price{
+        background-color: #f3f3f3;
+        .pricewrap{
+            padding-top: 10px;
+            position: relative;
+            .price{
+                p{
+                    color: #e4393c;
+                    i{
+                        font-size: 16px;
+                        vertical-align: 1px;
+                    }
+                    strong{
+                        font-size: 22px;
+                        line-height: 22px;
+                    }
+                    u{
+                        color: #005aa0;
+                        margin-left: 10px;
+                        vertical-align: 4px;
+                    }
+                }
+            }
+            .eval{
+                position: absolute;
+                right: 10px;
+                top: 8px;
+                ul{
+                    li{
+                        float: left;
+                        border-left: 1px solid #e6e6e6;
+                        color: #999;
+                        padding: 0 10px;
+                        text-align: center;
+                        p{
+                            font-size: 14px;
+                            color: #005ea7;
+                        }
+                    }
+                }
+            }
+        }
+        /* 促销 */
+        .promotion{
+            margin-top: 12px;
+            background: url(../images/price-bg.png) repeat-x 0 0;
+            p{
+                width: 430px;
+                height: 60px;
+                line-height: 30px;
+                position: relative;
+                i{
+                    display: inline-block;
+                    border: 1px solid #df3033;
+                    color: #df3033;
+                    line-height: 14px;
+                    text-align: center;
+                    padding: 2px 3px;
+                    margin-right: 2px;
+                }
+                u{
+                    font-size: 12px;
+                    color: #666;
+                }
+                a{
+                    position: absolute;
+                    left: 0;
+                    width: 100%;
+                    top: 0;
+                    height: 60px;
+                    text-align: right;
+                    s{
+                        position: absolute;
+                        left: 0;
+                        top: 20px;
+                    }
+                    &:hover{
+                        color: #c81623;
+                    }
+                }
+            }
+        }
+    }
+    /* 小细节*/
+    .location{
+        padding-top: 10px;
+        .work{
+            margin-bottom: 8px;
+          p{
+             a{
+                 display: inline-block;
+                 padding: 0 5px 0 18px;
+                 position: relative;
+                 margin-right: 10px;
+                 color: #5e69ad;
+                 border: 1px solid #ced2e6;
+                 border-radius: 7px;
+                 i,u{
+                     display: block;
+                     background: url(../images/detailsprite.png) no-repeat;
+                     width: 16px;
+                     height: 16px;
+                     position: absolute;
+                     left: 0;
+                     top: 0;
+                 }
+                 i{
+                     background-position: 0 -32px;
+                 }
+                 u{
+                     background-position: -48px -32px;
+                 }
+             }
+         }  
+        }
+        .place{
+            h4{
+                top: 11px;
+            }
+            .place-r{
+                height: 48px;
+                .r_top{
+                    margin-bottom: 3px;
+                    height: 24px;
+                    span{
+                        display: inline-block;
+                        line-height: 23px;
+                        padding:0 24px 0 4px;
+                        border: 1px solid #ddd;
+                    }
+                    i{
+                        font-size: 12px;
+                        font-weight: 700;
+                        color: #666;
+                        
+                    }
+                }
+                .r_bot{
+                    p{
+                        line-break: 20px;
+                        color: #333;
+                        i{
+                            color: #646fb0;
+                            margin: 0 10px;
+                        }
+                        span{
+                            color: #ddd;
+                            
+                        }
+                    }
+                }
+            }
+        }  
+     }
+     /* 提示  由京东发货 */
+     .hint{
+         margin-top: 10px;
+         .dethint{
+             p{
+                 color: #999;
+                 span{
+                     color: #e4393c;
+                 }
+                 i{
+                     font-weight: 700;
+                 }
+             }
+         }
+     }
+     .dweight{
+        margin-top: 30px;
+     }
+}
+/* 共同样式 价格 促销 */
+.item{
+    position: relative;
+    padding-left: 70px;
+    h4{
+        position: absolute;
+        left: 0;
+        top: 50%;
+        transform: translateY(-50%);
+        font-size: 12px;
+        color: #999;
+        line-height: 22px;
+        margin-left: 10px;
+    }
+}
+.s-arrow {
+    font-family: simsun;
+    text-decoration: none;
+}

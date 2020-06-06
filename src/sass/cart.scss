@@ -32,6 +32,14 @@ $tcolor:#e1251b;
     -webkit-line-clamp: $num;
     -webkit-box-orient:vertical;
 }
+@mixin melli($num:2){  //多行省略号
+    word-break: break-all;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    display: -webkit-box;
+    -webkit-line-clamp: $num;
+    -webkit-box-orient:vertical;
+}
 @mixin noelli(){//没有省略号
     overflow: hidden;
     font-size: 12px;
@@ -142,29 +150,17 @@ $tcolor:#e1251b;
     font-family: iconfont,sans-serif;
     color: #9f9f9f;
 }
+
 /* 自定义字体文件引入 */
 @font-face{font-family:impact;src:url(../font/b07c9855bd807ccc9d825cb0392c6ef8.woff) format("woff");font-weight:400;font-style:normal}
 @font-face{font-family:fzzzh;src:url(//misc.360buyimg.com/mtd/pc/index_2019/1.0.0/fonts/f7001cef4a64d1b77d0cd4dfc670cc35.woff) format("woff");font-weight:400;font-style:normal}
 @font-face{font-family:iconfont;src:url(../font/a84f5777e97992c6fb6d423c003f187b.woff) format("woff")}
 
-.iconfont {
-    font-family: iconfont,sans-serif;
-    font-style: normal;
-    -webkit-text-stroke-width: .2px;
-    -moz-osx-font-smoothing: grayscale;
-    font-size: 16px;
+#header{
+    height: 30px;
+    background-color: #e3e4e5;
 }
-.upload-bg {
-    font-family: iconfont,sans-serif;
-    color: #9f9f9f;
+#search{
+    height: 145px;
 }
-#main{
-    padding-bottom: 50px;
-}
-@import 'head';
-@import 'search';
-@import 'store';
-@import 'detail_nav';
-@import 'commodity';
-@import 'favorable';
-@import 'addcart';
+@import 'cartmain';

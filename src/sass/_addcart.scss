@@ -1,0 +1,62 @@
+.addcart{
+    margin-top: 20px;
+    &::after{
+        @extend %clear;
+    }
+    &>div{
+        float: left;
+    }
+    .del_count{
+        width: 58px;
+        height: 44px;
+        border: 1px solid #ddd;
+        position: relative;
+        input{
+            width: 43px;
+            height: 44px;
+            text-align: center;
+            line-break: 44px;
+            font-size: 16px;
+            border: 0;
+            outline-color: transparent;
+        }
+        i{
+            position: absolute;
+            width: 15px;
+            height: 22px;
+            border-left: 1px solid #ddd;
+            border-bottom: 1px solid #ddd;
+            margin-top: 1px;
+            right: 0;
+            text-align: center;
+            line-height: 22px;
+            font-size: 16px;
+            /* 禁用的类名 */
+            &.disable{
+                cursor: not-allowed;
+                color: #ddd;
+            }
+            &.add{
+                top: 0;
+            }
+            &.sub{
+                bottom: -1px;
+            }
+        }
+        
+    }
+    .del_add{
+        padding: 0 26px;
+        line-height: 46px;
+        font-size: 18px;
+        color: #fff;
+        font-weight: 700;
+        text-align: center;
+        background-color: #df3033;
+        margin-left: 10px;
+    }
+    .del_subsidy{
+        @extend .del_add;
+        background-color: #85c360;
+    }
+}

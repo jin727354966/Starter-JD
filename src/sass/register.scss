@@ -1,0 +1,180 @@
+%clear{//清除
+    content:"";
+    height: 0;
+    display: block;
+    overflow: hidden;
+    visibility: hidden;
+    clear: both;
+}
+.container{
+    width: 990px;
+    margin: 0 auto;
+}
+#head{
+    &::after{
+        @extend %clear;
+        padding-top: 20px;
+    }
+    .registerlogo{
+        float: left;
+        a{
+            display: block;
+            width: 170px;
+            height: 60px;
+            img{
+                width: 100%;
+                height: 100%;
+            }
+        }
+    }
+    .qus{
+        float: right;
+        margin-top: 50px;
+        b{
+            display: inline-block;
+            width: 18px;
+            height: 14px;
+            margin: 0 4px;
+            vertical-align: middle;
+            background: url(http://misc.360buyimg.com/user/passport/1.0.0/css/i/q-icon.png) no-repeat;
+        }
+    }
+}
+#hint{
+    padding: 10px 0;
+    background-color: #fff8f0;
+        p{
+            text-align: center;
+            color: #999;
+            i{
+                display: inline-block;
+                width: 16px;
+                height: 16px;
+                vertical-align: middle;
+                margin-right: 3px;
+                background: url(../images/icon-tips.png) no-repeat 0 0;
+            }
+            a{
+                color: #666;
+            }
+        }
+}
+/* 注册 */
+#enroll{
+    background-color: #e93854;
+}
+.enrollwrap{
+    height: 475px;
+    position: relative;
+    background: url(http://img11.360buyimg.com/da/jfs/t16363/164/2298198848/33213/870500f1/5aa68632Nd7790d0c.png) no-repeat 0 0;
+    background-size: contain;
+    .formwrap{
+        position: absolute;
+        right: 10px;
+        top: 10px;
+        width: 306px;
+        // height: 270px;
+        padding: 20px;
+        background-color: #fff;
+        .title{
+            height: 54px;
+            font-size: 22px;
+            line-height: 54px;
+            text-align: center;
+            border-bottom: 1px solid #ddd;
+        }
+        p{
+            margin: 10px 0px;
+        }
+        .errormsg{
+            display: none;
+            font-size: 12px;
+            line-height: 18px;
+            background-color: #ffebeb;
+            border: 1px solid #faccc6;
+            margin: 5px 0 ;
+            padding: 0 10px;
+            color: #e4393c;
+        }
+        .item{
+            position: relative;
+            width: 304px;
+            padding: 10px 0;
+            border:1px solid #bdbdbd;
+            border-left: 0;
+            
+            label{
+                position: absolute;
+                left: 0;
+                top: 0;
+                width: 38px;
+                height: 38px;
+                text-align: center;
+                line-height: 38px;
+                color: #666;
+                font-weight: 800;
+                border-left: 1px solid #bdbdbd;
+                border-right: 1px solid #bdbdbd;
+            }
+            input{
+                margin-left: 40px;
+                width: 250px;
+                height: 18px;
+                outline-color: transparent;
+                border: 0;
+                text-indent: 10px;
+            }
+            i{
+                position: absolute;
+                right: 10px;
+                top: 50%;
+                transform: translateY(-50%);
+                width: 14px;
+                height: 14px;
+                background: url(../images/pwd-icons-new.png) no-repeat 0 -145px;
+            }
+        }
+        .userp{
+            margin-top: 20px;
+            label{
+                background: url(../images/pwd-icons-new.png) 0 0px;  
+              }
+            
+        }
+        .pass{
+            label{
+                
+                background: url(../images/pwd-icons-new.png) -48px 0px;  
+              }
+        }
+        .forget{
+            height: 20px;
+            position: relative;
+            a{
+                position: absolute;
+                right: 5px;
+                top: 50%;
+                color: #ccc;
+                transform: translateY(-50%);
+            }
+            input{
+                vertical-align: middle;
+            }
+        }
+        .cdown{
+            input{
+                width: 304px;
+            height: 33px;
+            background-color: #e93854;
+            font-size: 22px;
+            line-height: 33px;
+            text-align: center;
+            color: #fff;
+            border: 0;
+            }
+            
+        }
+    }
+    
+}
+@import 'form';
