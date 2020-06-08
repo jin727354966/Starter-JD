@@ -170,5 +170,8 @@
   color: #fff;
   border: 0;
 }
+.enrollwrap .formwrap .cdown input.disable {
+  background-color: #ddd;
+}
 
 /*# sourceMappingURL=register.css.map */

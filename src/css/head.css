@@ -55,8 +55,9 @@
   left: 0;
   top: 29px;
   right: unset;
-  z-index: 2;
   display: none;
+  background-color: #fff;
+  z-index: 99;
   width: 300px;
   height: 442px;
   padding: 10px;
@@ -90,6 +91,30 @@
   height: 100%;
   position: relative;
 }
+#header .nav ul li.lore {
+  position: relative;
+}
+#header .nav ul li.lore::after {
+  position: absolute;
+  right: 0;
+  top: 0;
+}
+#header .nav ul li.lore .user {
+  display: inline-block;
+  display: none;
+  line-height: 30px;
+}
+#header .nav ul li.lore .user span {
+  display: inline-block;
+  vertical-align: middle;
+  padding: 0 1px;
+  line-height: 12px;
+  font-size: 10px;
+  color: #666;
+  margin-left: 5px;
+  border: #999 1px solid;
+  cursor: pointer;
+}
 #header .nav ul li .list {
   position: absolute;
   left: 0;
@@ -97,6 +122,8 @@
   right: unset;
   border: solid 1px #ccc;
   display: none;
+  background-color: #fff;
+  z-index: 99;
 }
 #header .nav ul li .oneitem {
   width: 280px;

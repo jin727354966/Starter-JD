@@ -1,6 +1,8 @@
 #indexheader{
     height: 30px;
-    background-color: red;
+    background-color: #e3e4e5;
+    position: relative;
+    z-index: 90;
 }
 #search{
     &.container{

@@ -6,6 +6,7 @@
     <title>Document</title>
     <link rel="stylesheet" href="./css/common.css">
     <link rel="stylesheet" href="./css/register.css">
+    <script src="./js/main.js" type="module" index="log" id="currentpage"></script>
 </head>
 <body>
     <div id="head" class="container">
@@ -27,16 +28,16 @@
         <div class="enrollwrap container">
             <div class="formwrap">
                 <p class="title">账户登入</p>
-                <form action="">
-                    <p class="errormsg">我错我错了我错了我错了我错了我错了我错了我错了我错了我错了了</p>
+                <form>
+                    <p class="errormsg"></p>
                     <p class="item userp">
                         <label for=""></label>
-                        <input type="text" placeholder="请输入用户名">
+                        <input type="text" placeholder="请输入用户名" name="username">
                         <i></i>
                     </p>
                     <p class="item pass">
                         <label for=""></label>
-                        <input type="text" placeholder="请输入密码">
+                        <input type="text" placeholder="请输入密码" name="password">
                         <i></i>
                     </p>
                     <p class="forget"><a href="#">忘记密码</a></p>

@@ -161,6 +161,7 @@
                 vertical-align: middle;
             }
         }
+        
         .cdown{
             input{
                 width: 304px;
@@ -171,6 +172,9 @@
             text-align: center;
             color: #fff;
             border: 0;
+                &.disable{
+                    background-color: #ddd;
+                }
             }
             
         }
