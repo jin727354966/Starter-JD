@@ -6,6 +6,7 @@
     <title>Document</title>
     <link rel="stylesheet" href="./css/common.css">
     <link rel="stylesheet" href="./css/detail.css">
+    <script src="./js/main.js" type="module" id="currentpage" index="detail"></script>
 </head>
 <body>
     <div id="header">
@@ -33,9 +34,10 @@
             </div>
             <div class="nav">
                 <ul>
-                    <li>
-                        <a href="#" class="login">你好，请登录</a>
-                        <a href="#" class="">免...</a>
+                    <li class="lore">
+                        <a href="http://localhost/Starter-JD/src/login.html" class="login">你好，请登录</a>
+                        <div class="user"><i></i><span>退出</span></div>
+                        <a href="http://localhost/Starter-JD/src/register.html" class="">免...</a>
                     </li>
                     <li><a href="#">我的订单</a></li>
                     <li>
@@ -72,7 +74,6 @@
                 alt="">
         </div>
         <div class="right">
-            <!-- 140 60 20 60 -->
             <div class="search-m">
                 <div class="form">
                     <div class="search_b">卸妆水</div>
@@ -168,19 +169,19 @@
         <div id="commodity" class="container">
             <!-- 左边放图片的地方 -->
             <div class="commoditypic">
-                <!-- 大图跟小图的的容器 -->
+                <!-- 大图,中图的容器 -->
                 <div class="picwrap">
-                    <!-- 大图的容器 -->
+                    <!-- 大图 阴影 巨大大图的容器 -->
                     <div class="mediumpic">
-                        <!-- 大图 -->
+                        <!-- 大图  -->
                         <div class="bimg">
-                            <img src="http://img10.360buyimg.com/n1/jfs/t1/125918/28/2070/447925/5ec22418E88445541/13e2126d671949bd.jpg" alt="">
+                            <img src="" alt="">
                         </div>
                         <!-- 阴影 -->
                         <div class="shadow"></div>
                         <!-- 巨大大图  大盒子的图要跟小盒子同步  src路径统一-->
                         <div class="bbimg">
-                            <img src="http://img10.360buyimg.com//n0/jfs/t1/125918/28/2070/447925/5ec22418E88445541/13e2126d671949bd.jpg" alt="">
+                            <img src="" alt="">
                         </div>
                     </div>
                 </div>
@@ -188,12 +189,8 @@
                 <div class="littlepic">
                     <div class="lpicwrap">
                     <ul>
-                        <li><img src="http://img10.360buyimg.com/n5/jfs/t1/76413/12/7892/133295/5d5e3645E52b29a11/c074148b8864e731.jpg" alt=""></li>
-                        <li><img src="http://img10.360buyimg.com/n5/jfs/t1/76413/12/7892/133295/5d5e3645E52b29a11/c074148b8864e731.jpg" alt=""></li>
-                        <li><img src="http://img10.360buyimg.com/n5/jfs/t1/76413/12/7892/133295/5d5e3645E52b29a11/c074148b8864e731.jpg" alt=""></li>
-                        <li><img src="http://img10.360buyimg.com/n5/jfs/t1/76413/12/7892/133295/5d5e3645E52b29a11/c074148b8864e731.jpg" alt=""></li>
-                        <li><img src="http://img10.360buyimg.com/n5/jfs/t1/76413/12/7892/133295/5d5e3645E52b29a11/c074148b8864e731.jpg" alt=""></li>
-                        <li><img src="http://img10.360buyimg.com/n5/jfs/t1/76413/12/7892/133295/5d5e3645E52b29a11/c074148b8864e731.jpg" alt=""></li>
+                        <!-- <li><img src="http://img10.360buyimg.com/n5/jfs/t1/76413/12/7892/133295/5d5e3645E52b29a11/c074148b8864e731.jpg" alt=""></li> -->
+                        
                     </ul>
                 </div>
                     <span class="picleft"></span>
@@ -223,7 +220,7 @@
                         <!-- 具体价格容器 -->
                         <div class="price item">
                             <h4>京&ensp;东&ensp;价</h4>
-                            <p><i>￥</i><strong>3790.00</strong><u>降价通知</u></p>
+                            <p><i>￥</i><strong></strong><u>降价通知</u></p>
                         </div>
                         <!-- 评价 选购指数  -->
                         <div class="eval">
@@ -290,7 +287,7 @@
                 <div class="del_count">
                     <input type="text" value="4">
                     <i class="add">+</i>
-                    <i class="sub">-</i>
+                    <i class="sub disable">-</i>
                 </div>
                 <div class="del_add">
                     加入购物车

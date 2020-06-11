@@ -13,19 +13,11 @@
         ---option.path  是存入cookie的路径
         */
 function setCookie(option){
-    let indate=new Date();
-indate.setDate(indate.getDate()+option.date);
-    if(Object.prototype.toString.call(option.value).slice(8,-1)==="Object" ||
-    Object.prototype.toString.call(option.value).slice(8,-1)==="Array") option.value = JSON.stringify(option.value);
-    if(!option.date){
-        document.cookie=option.key+"="+option.value;
-        return;
-    }
-    if(!option.path){
-        document.cookie=option.key+"="+option.value+";expires="+indate;
-        return;
-    } 
-    document.cookie=option.key+"="+option.value+";expires="+indate+";path="+option.path;
+    let d = new Date();
+    if(!option.date) option.date="/";
+        d.setDate(d.getDate() + option.date)
+        document.cookie = `${option.key}=${option.value};expires=${d};path=${option.path}`;
+    
 }
 /* ------------------------------------------------------------------ */
 /* cookie 获取指定的键的值 
@@ -35,7 +27,6 @@ function getCookie(key){
     let all=document.cookie;
     /* 2 将all 转成数组allarr  用到split()  得到的格式  ["name=[1,2,34,5,6]", "age=16", "sex=男"]*/
     let allarr=all.split("; ");
-    
     /* 3 遍历allarr */
     for(let i=0;i<allarr.length;i++){
         /* 每一个 allarr[i] 是一个键值对的字符串 "sex=男"  所以又需要截取，并且判断*/
@@ -55,10 +46,9 @@ function getCookie(key){
  function delCookie(key,path){
     setCookie({
         key:key,
-        value:null,
+        value:"1",
         date:-1,
         path:path
     })
  }
- delCookie("sex","/");
  export {setCookie,getCookie,delCookie};

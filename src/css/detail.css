@@ -246,13 +246,6 @@
   background-color: #ccc;
 }
 
-#indexheader {
-  height: 30px;
-  background-color: #e3e4e5;
-  position: relative;
-  z-index: 90;
-}
-
 #search.container {
   position: relative;
 }
@@ -598,21 +591,20 @@
 }
 #commodity .commoditypic .picwrap .mediumpic {
   /* 中等图片盒子 */
+  position: relative;
   /* 遮罩 遮罩的宽要js计算得出  通过比例*/
   /* 巨大的图盒子 */
 }
 #commodity .commoditypic .picwrap .mediumpic .bimg {
-  width: 100%;
-  height: 100%;
+  width: 352px;
+  height: 352px;
 }
 #commodity .commoditypic .picwrap .mediumpic .bimg img {
-  width: 100%;
-  height: 100%;
+  width: 352px;
+  height: 352px;
 }
 #commodity .commoditypic .picwrap .mediumpic .shadow {
   display: none;
-  width: 50px;
-  height: 50px;
   background-color: rgba(255, 255, 0, 0.4);
   position: absolute;
   left: 0;
@@ -623,9 +615,18 @@
   position: absolute;
   left: 353px;
   top: 0;
-  width: 540px;
-  height: 540px;
+  width: 400px;
+  height: 400px;
   overflow: hidden;
+  z-index: 8;
+  background-color: #fff;
+}
+#commodity .commoditypic .picwrap .mediumpic .bbimg img {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 1056px;
+  height: 1056px;
 }
 #commodity .commoditypic .littlepic {
   width: 290px;
@@ -640,11 +641,14 @@
 #commodity .commoditypic .littlepic .lpicwrap {
   width: 290px;
   height: 54px;
+  position: relative;
   overflow: hidden;
   /* 移动的小图ul */
 }
 #commodity .commoditypic .littlepic .lpicwrap ul {
-  width: 432px;
+  position: absolute;
+  left: 0;
+  top: 0;
   height: 54px;
   overflow: hidden;
 }
@@ -667,16 +671,14 @@
   width: 22px;
   height: 32px;
   transform: translateY(-50%);
-  background-image: url(../images/jtsprite.png);
-  background-repeat: no-repeat;
 }
 #commodity .commoditypic .littlepic span.picleft {
   left: 0;
-  background-position: 0 -54px;
+  background: url(../images/disabled-prev.png) no-repeat 0 0;
 }
 #commodity .commoditypic .littlepic span.picright {
   right: 0;
-  background-position: -78px 0;
+  background: url(../images/jtsprite.png) no-repeat -78px 0;
 }
 #commodity .commoditypic > p {
   width: 350px;
@@ -948,6 +950,7 @@
   border-bottom: 1px solid #ddd;
   margin-top: 1px;
   right: 0;
+  cursor: pointer;
   text-align: center;
   line-height: 22px;
   font-size: 16px;
@@ -972,6 +975,7 @@
   text-align: center;
   background-color: #df3033;
   margin-left: 10px;
+  cursor: pointer;
 }
 .addcart .del_subsidy {
   background-color: #85c360;

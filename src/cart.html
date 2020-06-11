@@ -5,11 +5,114 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <link rel="stylesheet" href="./css/common.css">
+    <link rel="stylesheet" href="./css/head.css">
     <link rel="stylesheet" href="./css/cart.css">
+    <script src="./js/main.js" type="module" id="currentpage" index="cart"></script>
 </head>
 <body>
-    <div id="header"></div>
-    <div id="search"></div>
+    <div id="header">
+        <div class="container">
+            <div class="left">
+                <div class="area">
+                    <i class="iconfont icon-ziyuan"></i>
+                    <a>浙江</a>
+                </div>
+                <div class="city">
+                    <ul>
+                        <li><a href="javascript:;" class="active">北京</a></li>
+                        <li><a href="javascript:;">北京</a></li>
+                        <li><a href="javascript:;">北京</a></li>
+                        <li><a href="javascript:;">北京</a></li>
+                        <li><a href="javascript:;">北京</a></li>
+                        <li><a href="javascript:;">北京</a></li>
+                        <li><a href="javascript:;">北京</a></li>
+                        <li><a href="javascript:;">北京</a></li>
+                        <li><a href="javascript:;">北京</a></li>
+                        <li><a href="javascript:;">北京</a></li>
+                        <li><a href="javascript:;">北京</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="nav">
+                <ul>
+                    <li class="lore">
+                        <a href="http://localhost/Starter-JD/src/login.html" class="login">你好，请登录</a>
+                        <div class="user"><i></i><span>退出</span></div>
+                        <a href="http://localhost/Starter-JD/src/register.html" class="">免...</a>
+                    </li>
+                    <li><a href="#">我的订单</a></li>
+                    <li>
+                        <a href="#" class="item">我的京东<i class="iconfont icon-xiangxia"></i></a>
+                        <div class="list oneitem"></div>
+
+                    </li>
+                    <li>
+                        <a href="#">京东会员</a>
+                    </li>
+                    <li>
+                        <a href="#" class="item">企业采购<i class="iconfont icon-xiangxia"></i></a>
+                        <div class="list twoitem"></div>
+                    </li>
+                    <li>
+                        <a href="#" class="item">客户服务<i class="iconfont icon-xiangxia"></i></a>
+                        <div class="list thirditem"></div>
+                    </li>
+                    <li>
+                        <a href="#" class="item">网站导航<i class="iconfont icon-xiangxia"></i></a>
+                    </li>
+                    <li class="last">
+                        <a href="#">手机京东</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    <!-- 搜索 -->
+    <div id="search" class="container c">
+        <div class="logo">
+            <img src="https://img10.360buyimg.com/img/jfs/t1/117726/20/7368/88789/5ec3777cE70ffaf64/47d8f5d0310958bd.gif"
+                alt="">
+        </div>
+        <div class="right">
+            <!-- 140 60 20 60 -->
+            <div class="search-m">
+                <div class="form">
+                    <div class="search_b">卸妆水</div>
+                    <input type="text" class="search_t">
+                    <span class="upload-bg"></span>
+                    <button type="button"><i class="iconfont"></i></button>
+                    <ul></ul><!-- 用于搜索下拉框 -->
+                </div>
+                <div class="car">
+                    <b>0</b>
+                    <i class="iconfont"></i>
+                    &nbsp;&nbsp;
+                    <a href="javascript:;">我的购物车</a>
+                </div>
+            </div>
+            <div id="hotwords">
+                <a href="javascript:;" class="hotwords_item">美妆狂欢购</a>
+                <a href="javascript:;">美妆狂欢购</a>
+                <a href="javascript:;">美妆狂欢购</a>
+                <a href="javascript:;">美妆狂欢购</a>
+                <a href="javascript:;">美妆狂欢购</a>
+            </div>
+            <div id="littlenav">
+                <ul class="navul">
+                    <li><a href="javascript:;" class="navfw">秒杀</a></li>
+                    <li><a href="javascript:;" class="navfw">优惠券</a></li>
+                    <li><a href="javascript:;">PLUS会员</a></li>
+                    <li><a href="javascript:;">品牌闪购</a></li>
+                    <li><a href="javascript:;">拍卖</a></li>
+                    <li><a href="javascript:;">京东家电</a></li>
+                    <li><a href="javascript:;">京东超市</a></li>
+                    <li><a href="javascript:;">京东生鲜</a></li>
+                    <li><a href="javascript:;">京东国际</a></li>
+                    <li><a href="javascript:;">京东金融</a></li>
+                </ul>
+            </div>
+        </div>
+    </div>
     <div id="cartmain">
         <!-- 全部商品+配送地址  -->
         <div id="cart_final" class="container">
@@ -46,11 +149,10 @@
                         <!-- 操作 -->
                         <div class="cart_oper">操作</div>
                     </li>
-                    <li class="cart_good">
+                    <li class="cart_good product" style="display: none;">
                         <!-- 全选 -->
                         <div class="select">
-                            <input type="checkbox">
-                            
+                            <input type="checkbox" class="procheck">
                         </div>
                         <!-- 商品 -->
                         <div class="type">
@@ -73,9 +175,9 @@
                         </div>
                         <!-- 数量 -->
                         <div class="cart_count">
-                            <span>-</span>
+                            <span class="prosub prochange">-</span>
                             <input type="text" value="1">
-                            <span>+</span>
+                            <span class="proadd prochange">+</span>
                         </div>
                         <!-- 小计 -->
                         <div class="cart_sum">
@@ -91,8 +193,7 @@
                     <li class="cart_good aggregate">
                         <!-- 全选 -->
                         <div class="select">
-                            <input type="checkbox">
-                            
+                            <input type="checkbox"> 全选
                         </div>
                         <!-- 商品 -->
                         <div class="type">

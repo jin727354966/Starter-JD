@@ -52,13 +52,14 @@
         position: relative;
         overflow: hidden;
         .seckill_lb{ //轮播图图片容器
-            @include wh(100%,1220px);
-            ul{
-                @include wh(100%,610px);
-                &::after{
-                    @extend %clear;
-                }
-                li{
+            height: 100%;
+            position: absolute;
+            left: 0;
+            top: 0;
+            &::after{
+                @extend %clear;   
+           }
+                .item{
                     float: left;
                     &::after{
                         content: "";
@@ -89,6 +90,7 @@
                             @include borderstyle(1px,solid,#e1251b);
                             text-align: left;
                             line-height: 22px;
+                            position: relative;
                             span{
                                 display: inline-block;
                                 @include wh(22px,95px);
@@ -110,8 +112,9 @@
                                 }
                             }
                             u{
-                                display: inline-block;
-                                vertical-align: top;
+                                position: absolute;
+                                right: 1px;
+                                top: 1px;
                                 color: $color;
                                 text-decoration: line-through;
                             }
@@ -126,7 +129,6 @@
                 }
             }
         }
-    }
     .major{
         @include wh(240px,170px);
         padding: 10px;

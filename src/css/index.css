@@ -4,7 +4,7 @@
   margin: 0 auto;
 }
 
-#recommend .recommend_list ul:after, #goodnew .issue .issue_lb .lb_wrap .picwrap::after, #goodnew::after, #priceshop .specials .specials_list .item .item_right ul::after, #priceshop:after, #seckill .seckill_commodity .seckill_lb ul::after, #bnav .bnav_r .r_new .title:after, #bnav .bnav_r .r_hi .hi_logo::after, #bnav::after, #search::after {
+#recommend .recommend_list ul:after, #goodnew .issue .issue_lb .lb_wrap .picwrap::after, #goodnew::after, #priceshop .specials .specials_list .item .item_right ul::after, #priceshop:after, #seckill .seckill_commodity .seckill_lb::after, #bnav .bnav_r .r_new .title:after, #bnav .bnav_r .r_hi .hi_logo::after, #bnav::after, #search::after {
   content: "";
   height: 0;
   display: block;
@@ -80,13 +80,6 @@
   font-family: iconfont;
   src: url(../font/a84f5777e97992c6fb6d423c003f187b.woff) format("woff");
 }
-#indexheader {
-  height: 30px;
-  background-color: #e3e4e5;
-  position: relative;
-  z-index: 90;
-}
-
 #search.container {
   position: relative;
 }
@@ -285,17 +278,22 @@
   position: relative;
 }
 #bnav .bnav_c .picwrap {
-  width: 1180px;
+  width: 590px;
   height: 472px;
-  position: absolute;
-  left: 0;
-  top: 0;
-  right: unset;
+  overflow: hidden;
+  position: relative;
 }
 #bnav .bnav_c .picwrap img {
   width: 590px;
   height: 472px;
   vertical-align: top;
+  position: absolute;
+  left: 0;
+  top: 0;
+  display: none;
+}
+#bnav .bnav_c .picwrap img.active {
+  display: block;
 }
 #bnav .bnav_c .circle {
   position: absolute;
@@ -665,35 +663,33 @@
   overflow: hidden;
 }
 #seckill .seckill_commodity .seckill_lb {
-  width: 1220px;
   height: 100%;
+  position: absolute;
+  left: 0;
+  top: 0;
 }
-#seckill .seckill_commodity .seckill_lb ul {
-  width: 610px;
-  height: 100%;
-}
-#seckill .seckill_commodity .seckill_lb ul li {
+#seckill .seckill_commodity .seckill_lb .item {
   float: left;
 }
-#seckill .seckill_commodity .seckill_lb ul li::after {
+#seckill .seckill_commodity .seckill_lb .item::after {
   content: "";
   float: left;
   width: 1px;
   height: 260px;
   background: linear-gradient(180deg, white, #eeeeee, white);
 }
-#seckill .seckill_commodity .seckill_lb ul li a {
+#seckill .seckill_commodity .seckill_lb .item a {
   float: left;
   width: 202px;
   height: 230px;
   text-align: center;
   padding-top: 30px;
 }
-#seckill .seckill_commodity .seckill_lb ul li a img {
+#seckill .seckill_commodity .seckill_lb .item a img {
   width: 144px;
   height: 144px;
 }
-#seckill .seckill_commodity .seckill_lb ul li a h3 {
+#seckill .seckill_commodity .seckill_lb .item a h3 {
   width: 160px;
   height: 18px;
   margin: 0 auto;
@@ -705,7 +701,7 @@
   font-size: 12px;
   line-height: 18px;
 }
-#seckill .seckill_commodity .seckill_lb ul li a p {
+#seckill .seckill_commodity .seckill_lb .item a p {
   margin: auto;
   margin-top: 7px;
   width: 150px;
@@ -713,8 +709,9 @@
   border: 1px solid #e1251b;
   text-align: left;
   line-height: 22px;
+  position: relative;
 }
-#seckill .seckill_commodity .seckill_lb ul li a p span {
+#seckill .seckill_commodity .seckill_lb .item a p span {
   display: inline-block;
   width: 95px;
   height: 22px;
@@ -723,12 +720,12 @@
   text-align: center;
   color: #fff;
 }
-#seckill .seckill_commodity .seckill_lb ul li a p span strong {
+#seckill .seckill_commodity .seckill_lb .item a p span strong {
   font-size: 16px;
   line-height: 22px;
   font-weight: 800;
 }
-#seckill .seckill_commodity .seckill_lb ul li a p span::after {
+#seckill .seckill_commodity .seckill_lb .item a p span::after {
   content: "";
   position: absolute;
   right: 0;
@@ -737,13 +734,14 @@
   border-style: solid;
   border-color: transparent white white transparent;
 }
-#seckill .seckill_commodity .seckill_lb ul li a p u {
-  display: inline-block;
-  vertical-align: top;
+#seckill .seckill_commodity .seckill_lb .item a p u {
+  position: absolute;
+  right: 1px;
+  top: 1px;
   color: #999;
   text-decoration: line-through;
 }
-#seckill .seckill_commodity .seckill_lb ul li a:hover h3 {
+#seckill .seckill_commodity .seckill_lb .item a:hover h3 {
   color: #c81623;
 }
 #seckill .major {

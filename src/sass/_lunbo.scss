@@ -47,11 +47,19 @@
         overflow: hidden;
         position: relative;
          .picwrap{
-            @include wh(472px,1180px);//无缝轮播
-            @include positionstyle(0,0);
+            @include wh(472px,590px);//无缝轮播
+            overflow: hidden;
+            position: relative;
             img{
             @include wh(472px,590px);
             vertical-align: top;
+            position: absolute;
+            left: 0;
+            top: 0;
+            display: none;
+            &.active{
+                display: block;
+            }
             }
          }
          .circle{

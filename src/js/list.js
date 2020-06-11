@@ -1,7 +1,11 @@
-/* 列表页 */
+/* 列表页 每一个产品点击，a连接放详情页地址，并且加上对应sid的数据  */
 import{Render} from './render.js';
+import{headerinit} from './headerinit.js';
 function listinit(){
-    /*1 列表总页数据渲染 */
+    /* 1 头部 cookie获取 */
+    /* 1 获取头部父容器 显示用户名 */
+    headerinit();
+    /*2 列表总页数据渲染 */
     let goodsul=document.querySelector("#listmain_list .goods_wrap ul");
     /* 获取分页需要的元素 */
     let appoint=document.querySelector("#listmain_list .paging_wrap .paging_r");//指定到几页

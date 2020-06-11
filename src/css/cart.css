@@ -4,7 +4,7 @@
   margin: 0 auto;
 }
 
-#cart_list .list_wrap ul li::after, #cart_final::after {
+#cart_list .list_wrap ul li::after, #cart_final::after, #search::after {
   content: "";
   height: 0;
   display: block;
@@ -43,13 +43,153 @@
   font-family: iconfont;
   src: url(../font/a84f5777e97992c6fb6d423c003f187b.woff) format("woff");
 }
-#header {
-  height: 30px;
-  background-color: #e3e4e5;
-}
-
 #search {
   height: 145px;
+}
+
+#search.container {
+  position: relative;
+}
+#search .logo {
+  float: left;
+  width: 190px;
+  height: 120px;
+  position: absolute;
+  left: 0;
+  top: 0;
+  right: unset;
+  bottom: 0;
+  margin: auto 0;
+}
+#search .logo img {
+  width: 190px;
+  height: 120px;
+}
+#search .right {
+  width: 770px;
+  float: right;
+}
+#search .right .search-m {
+  width: 770px;
+  height: 36px;
+  padding-top: 24px;
+}
+#search .right .search-m .form {
+  border: solid 2px #e2231a;
+  width: 486px;
+  height: 32px;
+  position: relative;
+  float: left;
+}
+#search .right .search-m .form .search_b, #search .right .search-m .form .search_t {
+  position: absolute;
+  left: 0;
+  top: 0;
+  right: unset;
+  width: 367px;
+  height: 28px;
+  line-height: 28px;
+  padding: 2px 44px 2px 17px;
+  color: #999;
+  z-index: 50;
+}
+#search .right .search-m .form .search_t {
+  border: 0;
+  z-index: 2;
+}
+#search .right .search-m .form .upload-bg {
+  position: absolute;
+  left: unset;
+  top: 6px;
+  right: 75px;
+  font-size: 20px;
+  color: #999;
+  z-index: 90;
+}
+#search .right .search-m .form button {
+  width: 58px;
+  height: 32px;
+  position: absolute;
+  left: unset;
+  top: 0px;
+  right: 0px;
+  background-color: #e1251b;
+  border: 0;
+}
+#search .right .search-m .form button .iconfont {
+  color: #fff;
+  font-size: 20px;
+  font-weight: 700;
+}
+#search .right .search-m .car {
+  float: left;
+  margin-left: 18px;
+  width: 130px;
+  height: 34px;
+  border: solid 1px #eee;
+  color: #e1251b;
+  line-height: 34px;
+  text-align: center;
+  position: relative;
+}
+#search .right .search-m .car .icon-Shapecopy {
+  font-weight: 700;
+  font-size: 16px;
+}
+#search .right .search-m .car b {
+  position: absolute;
+  left: 30px;
+  top: 1px;
+  right: unset;
+  width: 18px;
+  height: 14px;
+  border-radius: 7px;
+  background-color: #e1251b;
+  color: #fff;
+  font-size: 12px;
+  text-align: center;
+  line-height: 14px;
+}
+#search .right .search-m .car a {
+  color: #e1251b;
+}
+#search .right .search-m .car:hover {
+  border-color: #c81623;
+}
+#search .right #hotwords {
+  margin-top: 5px;
+  line-height: 20px;
+}
+#search .right #hotwords a {
+  margin-right: 10px;
+}
+#search .right #hotwords .hotwords_item {
+  color: #c81623;
+}
+#search .right #hotwords a:hover {
+  color: #c81623;
+}
+#search .right #littlenav {
+  padding-top: 20px;
+  height: 40px;
+  margin-left: -20px;
+}
+#search .right #littlenav .navul li {
+  float: left;
+}
+#search .right #littlenav .navul li a {
+  line-height: 40px;
+  display: block;
+  margin: 0 11px;
+  font-size: 15px;
+  color: #333;
+}
+#search .right #littlenav .navul li a:hover {
+  color: #c81623;
+}
+#search .right #littlenav .navul li .navfw {
+  color: #c81623;
+  font-weight: 700;
 }
 
 /* 购物车 */
@@ -248,6 +388,7 @@
   text-align: center;
   line-height: 18px;
   color: #666;
+  cursor: pointer;
   /* 禁止点击的类 */
 }
 #cart_list .list_wrap ul li.cart_good .cart_count span.disable {
@@ -268,19 +409,28 @@
 #cart_list .list_wrap ul li.cart_good .cart_oper p {
   margin-top: 3px;
 }
+#cart_list .list_wrap ul li.cart_good .cart_oper .del {
+  cursor: pointer;
+}
 #cart_list .list_wrap ul li.aggregate {
   padding: 0;
   background-color: #fff;
 }
 #cart_list .list_wrap ul li.aggregate .select {
+  width: 70px;
   margin-top: 15px;
+  margin-right: 10px;
+}
+#cart_list .list_wrap ul li.aggregate .select input, #cart_list .list_wrap ul li.aggregate .select li.cart_good .cart_count span, #cart_list .list_wrap ul li.cart_good .cart_count li.aggregate .select span {
+  margin-right: 10px;
 }
 #cart_list .list_wrap ul li.aggregate .type {
   margin-top: 15px;
-  width: 552px;
+  width: 512px;
 }
 #cart_list .list_wrap ul li.aggregate .type span {
   margin-right: 5px;
+  cursor: pointer;
 }
 #cart_list .list_wrap ul li.aggregate .type .delall {
   font-weight: 800;

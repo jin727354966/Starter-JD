@@ -156,11 +156,12 @@ $tcolor:#e1251b;
 @font-face{font-family:fzzzh;src:url(//misc.360buyimg.com/mtd/pc/index_2019/1.0.0/fonts/f7001cef4a64d1b77d0cd4dfc670cc35.woff) format("woff");font-weight:400;font-style:normal}
 @font-face{font-family:iconfont;src:url(../font/a84f5777e97992c6fb6d423c003f187b.woff) format("woff")}
 
-#header{
-    height: 30px;
-    background-color: #e3e4e5;
-}
+// #header{
+//     height: 30px;
+//     background-color: #e3e4e5;
+// }
 #search{
     height: 145px;
 }
+@import 'search';
 @import 'cartmain';

@@ -59,31 +59,6 @@ class Enroll{//注册的类  登入的类
             this.subclickHandler(e);
         });
     }
-    /* 登入密码验证 */
-    // passHandler(){
-    //     let passreg=/^[a-zA-Z0-9]{8,16}$/;//用户名8到16位
-    //         if(passreg.test(this.password.value.trim())){
-    //             this.errorshow("password");//调用显示方法
-    //             //判断密码是否跟用户名对应
-    //             pajax({
-    //                 type:"post",
-    //                 url:"http://localhost/Starter-JD/php/login.php",
-    //                 data:{
-    //                     username:this.username.value.trim(),
-    //                     password:this.password.value.trim()
-    //                 }
-    //             }).then((res)=>{//this指向实例对象
-    //                 if(res!=="1"){//已被注册
-    //                     this.errorshow("user",res);
-    //                 }
-    //             }).catch(()=>{//用户名可以用  先删除对象的user属性，清空页面错误信息，判断对象是否是空对象，是空对象就隐藏，不是就重新遍历显示新内容
-    //                 this.errorshow("user");//调用显示方法
-    //             })
-    //         }else{//如果不符合正则，则显示错误
-                
-    //             this.errorshow("password","密码不符合规则");//调用显示方法
-    //         }
-    // }
     /* 提交表单 */
     subclickHandler(e){
         if(e.currentTarget.disabled) return;

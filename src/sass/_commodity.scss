@@ -17,19 +17,20 @@
             /* 中等图片 */
             .mediumpic{
                 /* 中等图片盒子 */
+                position: relative;
                 .bimg{
-                    width: 100%;
-                    height: 100%;
+                    width: 352px;
+                    height: 352px;
                     img{
-                        width: 100%;
-                        height: 100%;
+                        width: 352px;
+                        height: 352px;
                     }
                 }
                 /* 遮罩 遮罩的宽要js计算得出  通过比例*/
                 .shadow{
                     display: none;
-                    width: 50px;
-                    height: 50px;
+                    // width: 50px;
+                    // height: 50px;
                     background-color: rgba($color: #ff0, $alpha: .4);
                     position: absolute;
                     left: 0;
@@ -41,9 +42,18 @@
                     position: absolute;
                     left: 353px;
                     top: 0;
-                    width: 540px;
-                    height: 540px;
+                    width: 400px;
+                    height: 400px;
                     overflow: hidden;
+                    z-index: 8;
+                    background-color: #fff;
+                    img{
+                        position: absolute;
+                        left: 0;
+                        top: 0;
+                        width: 1056px;
+                        height: 1056px;
+                    }
                 }
             }
             
@@ -61,10 +71,13 @@
             .lpicwrap{
                 width: 290px;
                 height: 54px;
+                position: relative;
                 overflow: hidden;
                 /* 移动的小图ul */
                 ul{
-                    width: 432px;
+                    position: absolute;
+                    left: 0;
+                    top: 0;
                     height: 54px;
                     overflow: hidden;
                     &::after{
@@ -94,15 +107,19 @@
                 width: 22px;
                 height: 32px;
                 transform: translateY(-50%);
-                background-image: url(../images/jtsprite.png);
-                background-repeat: no-repeat;
+                // background-image: url(../images/jtsprite.png);
+                // background-repeat: no-repeat;
                 &.picleft{
                     left: 0;
-                    background-position: 0 -54px;
+                    background: url(../images/disabled-prev.png) no-repeat 0 0;
+                    // // background-position: 0 -54px;
+                    // &:hover{
+                    //     background: url(../images/jtsprite.png) no-repeat 0 -54px;
+                    // }
                 }
                 &.picright{
                     right: 0;
-                    background-position: -78px 0;
+                    background: url(../images/jtsprite.png) no-repeat -78px 0;
                 }
             }
         }

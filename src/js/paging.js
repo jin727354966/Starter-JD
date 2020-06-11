@@ -112,13 +112,13 @@ class Paging{
         for(let value of newdata){
             this.elem.innerHTML+=`
                     <li>
-                        <a href="javascript:;" class="pic" >
+                        <a href="http://localhost/Starter-JD/src/detail.html?sid=${value.sid}" class="pic" >
                             <div class="goodpic">
                                 <img src="" alt="" data="${value.url}">
                             </div>
                         </a>
                         <p>￥${value.price}</p>
-                        <a href="javascript:;" class="headline">
+                        <a href="http://localhost/Starter-JD/src/detail.html?sid=${value.sid}" class="headline">
                             <h4>${value.title}</h4>
                             <h5>${value.des}</h5>
                         </a>
@@ -146,7 +146,6 @@ class Paging{
                     </li>
                     `;
         }
-
     }
     toggleclass(pre,now){
         if(pre.className) pre.className="";

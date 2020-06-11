@@ -205,6 +205,7 @@
                             text-align: center;
                             line-height: 18px;
                             color: #666;
+                            cursor: pointer;
                             /* 禁止点击的类 */
                             &.disable{
                                 color: #e3e4e5;
@@ -226,6 +227,9 @@
                         p{
                             margin-top: 3px;
                         }
+                        .del{
+                            cursor: pointer;
+                        }
                     }
                 }
                 /* 总计 */
@@ -233,13 +237,19 @@
                     padding: 0;
                     background-color: #fff;
                     .select{
+                        width: 70px;
                         margin-top: 15px;
+                        margin-right: 10px;
+                        input{
+                            margin-right: 10px;
+                        }
                     }
                     .type{
                         margin-top: 15px;
-                        width: 552px;
+                        width: 512px;
                         span{
                             margin-right: 5px;
+                            cursor: pointer;
                         }
                         .delall{
                             font-weight: 800;

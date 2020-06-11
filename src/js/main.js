@@ -3,6 +3,8 @@ import {reginit} from './register.js';
 import {loginit} from './login.js';
 import {demoinit} from './demo.js';
 import {listinit} from './list.js';
+import {detailinit} from './detail.js';
+import {cartinit} from './cart.js';
 if(document.getElementById("currentpage")){
     let url=document.getElementById("currentpage").getAttribute("index");
     switch(url){
@@ -17,6 +19,12 @@ if(document.getElementById("currentpage")){
             break;
         case "list":
             listinit();
+            break;
+        case "detail": 
+            detailinit();
+            break;
+        case "cart":
+            cartinit();
             break;
     }
 }
