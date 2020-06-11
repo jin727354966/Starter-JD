@@ -12,7 +12,8 @@ import {Enroll} from './user.js';
             tel:document.querySelector("input[name='tell']"),
             sub:document.querySelector("input[type='submit']"),//提交按钮
             checkbox:document.querySelector("input[type='checkbox']"),//履行诺言
-            errormsg:document.querySelector(".errormsg")//提交按钮
+            errormsg:document.querySelector(".errormsg"),//提交按钮
+            strength:document.querySelector(".formwrap .pass u")
         }).init();
     }
     export {reginit};

@@ -27,6 +27,21 @@
                 @include wh(32px,486px);
                 position: relative;
                 float: left;
+                ul{
+                    display: none;
+                    position: absolute;
+                    left: 9px;
+                    top: 41px;
+                    background-color: #fff;
+                    width: 364px;
+                    z-index: 9;
+                    li{
+                        font-size: 12px;
+                        line-height: 18px;
+                        color: #999;
+                        margin-bottom: 5px;
+                    }
+                }
                 .search_b{
                     @include positionstyle(0,0);
                     @include wh(28px,367px);

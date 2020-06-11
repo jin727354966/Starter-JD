@@ -37,6 +37,8 @@ function listinit(){
     let pricebot=pricebtn.querySelector(".bot");
     let sortbool=false;
     pricebtn.addEventListener("click",()=>{
+        console.log(1);
+        
         sortbool=!sortbool;
         /* 按键标识显示 */
         if(sortbool){//为true 从低到高
@@ -46,11 +48,22 @@ function listinit(){
             pricetop.style.backgroundPosition="-10px -100px";
             pricebot.style.backgroundPosition="-10px -130px";
         }
+        let oPage2={
+            itemwrap:pagingparent,//每一页的父容器
+            top:prevPage,   //上一页
+            bot:nextPage,   //下一页
+            text:text,     //指定跳转哪一页的数
+            btn:btn,       //指定跳转哪一页的按钮
+            pagetext:pagetext,   // 要显示总页码
+            count:10,     //每页设置显示几条数据
+            elem:goodsul  //要渲染的元素
+        };
         new Render({
             elem:goodsul,//要渲染的元素
             url:"http://localhost/Starter-JD/php/render.php",//接口
             type:"listmain",
-            sortbool:sortbool
+            sortbool:sortbool,
+            oPage:oPage2
         }).init();
     });
     

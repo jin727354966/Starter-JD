@@ -280,6 +280,21 @@
   position: relative;
   float: left;
 }
+#search .right .search-m .form ul {
+  display: none;
+  position: absolute;
+  left: 9px;
+  top: 41px;
+  background-color: #fff;
+  width: 364px;
+  z-index: 9;
+}
+#search .right .search-m .form ul li {
+  font-size: 12px;
+  line-height: 18px;
+  color: #999;
+  margin-bottom: 5px;
+}
 #search .right .search-m .form .search_b, #search .right .search-m .form .search_t {
   position: absolute;
   left: 0;

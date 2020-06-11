@@ -18,14 +18,19 @@ class Paging{
     init(){
         /* 1 计算要分几页 并且显示在指定位置   要向上取整*/
         this.page=Math.ceil(this.alldata.length/this.count);
-        
         this.pagetext.textContent=this.page;
         /* 2 分几页，就对应生成每一页的li */
+        if(this.itemwrap.item){
+            for(let item of this.itemwrap.item){
+                item.remove();
+            }
+        }
         for(let i=1;i<=this.page;i++){
             let a=document.createElement("a");
             a.textContent=i;
             a.href="javascript:;";
             this.aItem.push(a);
+            this.itemwrap.item=this.aItem;
             this.itemwrap.insertBefore(a,this.bot);
         }
         // 首次需要渲染一次  默认是渲染第一页，所以第一页的页面要加类

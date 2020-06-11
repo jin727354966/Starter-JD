@@ -114,6 +114,21 @@
   position: relative;
   float: left;
 }
+#search .right .search-m .form ul {
+  display: none;
+  position: absolute;
+  left: 9px;
+  top: 41px;
+  background-color: #fff;
+  width: 364px;
+  z-index: 9;
+}
+#search .right .search-m .form ul li {
+  font-size: 12px;
+  line-height: 18px;
+  color: #999;
+  margin-bottom: 5px;
+}
 #search .right .search-m .form .search_b, #search .right .search-m .form .search_t {
   position: absolute;
   left: 0;
@@ -253,6 +268,8 @@
   top: 0;
   right: unset;
   display: none;
+  z-index: 9;
+  background-color: #fff;
   box-shadow: 1px 0px 5px #5f5e5e;
 }
 #bnav .bnav_l .bnav-wrap .bnav_item {
@@ -755,6 +772,23 @@
   position: relative;
   overflow: hidden;
 }
+#seckill .major .major_wrap ul {
+  position: absolute;
+  left: 50%;
+  bottom: 3px;
+  transform: translateX(-50%);
+}
+#seckill .major .major_wrap ul li {
+  float: left;
+  margin: 2px;
+  width: 5px;
+  height: 5px;
+  border-radius: 50%;
+  background-color: #999;
+}
+#seckill .major .major_wrap ul li.active {
+  background-color: red;
+}
 #seckill .major .major_lb {
   width: 340px;
   height: 240px;
@@ -780,11 +814,23 @@
 }
 #seckill .major .major_lb a p {
   color: #666;
+  width: 120px;
+  height: 20px;
+  overflow: hidden;
+  font-size: 12px;
+  text-overflow: ellipsis;
+  word-break: break-all;
 }
 #seckill .major .major_lb a h3 {
   color: #333;
   font-size: 14px;
   font-weight: 700;
+  width: 120px;
+  height: 18px;
+  overflow: hidden;
+  font-size: 12px;
+  text-overflow: ellipsis;
+  word-break: break-all;
 }
 #seckill .major .major_lb a h5 {
   width: 76px;
@@ -1263,6 +1309,7 @@
   position: absolute;
   left: 0;
   top: 0;
+  font-size: 0px;
   overflow: hidden;
 }
 #findgood .findwrap .fglb_wrap .fglb a {
@@ -1342,7 +1389,7 @@
 }
 #goodnew .issue .issue_lb .lb_wrap {
   width: 220px;
-  height: 215px;
+  height: 230px;
   padding: 0 10px;
   position: relative;
   overflow: hidden;
@@ -1408,6 +1455,7 @@
   margin-bottom: 20px;
 }
 #goodnew .issue .issue_lb .lb_wrap .picwrap a .deg span {
+  line-height: 20px;
   color: #e1251b;
   font-size: 10px;
 }
@@ -1438,6 +1486,12 @@
 }
 #goodnew .ranking .ranking_list {
   margin-top: 10px;
+}
+#goodnew .ranking .ranking_list .item ul {
+  display: none;
+}
+#goodnew .ranking .ranking_list .item ul.active {
+  display: block;
 }
 #goodnew .ranking .ranking_list .item ul li {
   margin: 0 0 10px 10px;
@@ -1678,6 +1732,11 @@
 
 #channel .channel_good {
   font-size: 0;
+  width: 990px;
+  overflow: hidden;
+}
+#channel .channel_good .goodwrap {
+  width: 1000px;
 }
 #channel .channel_good .bwrap {
   vertical-align: top;

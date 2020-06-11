@@ -15,9 +15,11 @@ class Render{
         
     }
     init(){
+        
         pajax({
             url:this.url
         }).then((res)=>{
+            
             res=JSON.parse(res);
             if(this.type==="showhide"){
                 this.oPage.alldata=res;
@@ -45,8 +47,6 @@ class Render{
                     }
                 }
             }
-            this.elem.innerHTML="";//把要渲染的元素先清空
-            
             /* 分页  只有列表页才有分页*/
             /* 把数据放到this.oPage里，传出去渲染   分页 轮播 */
             if(this.type==="listmain" || this.type==="showhide"){
@@ -76,7 +76,6 @@ class Render{
                     </li>
                     `;
                 }
-                
             }
             /* 懒加载滚轮事件 */
         window.addEventListener("scroll",(e)=>{
@@ -89,14 +88,13 @@ class Render{
         let scrollball=document.documentElement.scrollTop || document.body.scrollTop;
         for(let value of list){
             let distance=0;
-                if(this.type==="indexrec") distance=400;
+                if(this.type==="indexrec") distance=10;
                 else if(this.type==="listmain") distance=10;
                 if(scrollball>=value.offsetTop-distance){
                     var parent=Array.from(Array.from(value.children)[0].children)[0];
                     let img=Array.from(parent.children)[0];
                     img.src=img.getAttribute('data');
                 }
-            
         }
     }
 }

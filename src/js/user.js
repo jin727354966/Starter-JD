@@ -18,6 +18,8 @@ class Enroll{//注册的类  登入的类
         this.errormsg=option.errormsg;//错误提示
         this.checkbox=option.checkbox;//盒子选择
         this.error={};//用于防止错误提示的对象
+        this.form=option.form;
+        this.strength=option.strength;//展示用户名强度
     }
     init(){//初始函数
         this.sub.disabled=true;
@@ -38,13 +40,15 @@ class Enroll{//注册的类  登入的类
                 this.subHandler(e);
             });
         }
-        // }else if(this.type==='log'){//表示登入
-        //     // this.password.addEventListener("blur",(e)=>{//登入密码验证
-        //     //     var e=e||window.event;
-        //     //     this.passHandler(e);
-        //     //     this.subHandler();
-        //     // });
-        // }
+        if(this.type==="reg"){
+            this.password.addEventListener("input",(e)=>{//注册密码验证
+                var e=e||window.event;
+                /* 判断强弱 */
+                this.determine(e);
+                this.subHandler();
+            });
+        }
+        
         this.password.addEventListener("blur",(e)=>{//注册密码验证
             var e=e||window.event;
             this.verify(e);
@@ -55,9 +59,46 @@ class Enroll{//注册的类  登入的类
             this.userhandler(e);
             this.subHandler();
         });
+        
         this.sub.addEventListener("click",(e)=>{
             this.subclickHandler(e);
         });
+    }
+    /* 判断强弱 */
+    determine(){
+        /* 判断强弱 */
+            let passvalue=this.password.value.trim();
+            
+            if(passvalue.length>7 && passvalue.length<17){
+                let passNum = /\d+/;
+            let passCaps = /[A-Z]+/;
+            let passlower = /[a-z]+/;
+            let passSymbol = /[\W\_]+/;
+        let num = 0;
+            if (passNum.test(passvalue)) num++;
+            if (passCaps.test(passvalue)) num++;
+            if (passlower.test(passvalue)) num++;
+            if (passSymbol.test(passvalue)) num++;
+        this.strength.innerHTML="";
+        switch (num) {
+                case 1:
+                this.strength.innerHTML="弱";
+                this.strength.style.color="red";
+                this.errorshow("password","密码太弱哦");
+                return;
+                case 2:
+                case 3:
+                this.strength.innerHTML="中";
+                this.strength.style.color="orange";
+                this.errorshow("password");
+                break;
+                case 4:
+                this.strength.innerHTML="强";
+                this.strength.style.color="green";
+                this.errorshow("password");
+                break;
+            }
+            }
     }
     /* 提交表单 */
     subclickHandler(e){
@@ -74,7 +115,6 @@ class Enroll{//注册的类  登入的类
             }).then((res)=>{//this指向实例对象
                 if(res==="1"){//用户名与密码一致 可以登入，并且把用户名存在cookie 中
                     this.errorshow("user");//调用显示方法
-
                 }
             }).catch(()=>{//用户名与密码不一致 
                 this.errorshow("user",res);
@@ -107,6 +147,8 @@ class Enroll{//注册的类  登入的类
         let userreg=/^[a-zA-Z]{1}\w{5,17}$/;//用户名6到18位  需要字母开头
         if(userreg.test(this.username.value.trim())){//如果符合正则，则发送ajax请求
             //判断是登入还是注册
+            
+            
             if(this.type==='reg'){//注册
                 //判断用户名是否被注册
                 pajax({
@@ -140,11 +182,15 @@ class Enroll{//注册的类  登入的类
                             date:60,
                             path:"/"
                         });
-                        /* 跳转页面到首页 */
-                        location.href="./demo.html";
+                        /* 提交按键可以点击 */
+                        this.sub.disabled=false;
+                        this.sub.className="";
+                        // location.href="./demo.html";
                     }
                 }).catch(()=>{//用户名错误  
                     this.errorshow("user",res);
+                    this.sub.disabled=true;
+                    this.sub.className="disable";
                 })
             }
         }else{//正则不符合规则
@@ -155,6 +201,7 @@ class Enroll{//注册的类  登入的类
         switch(e.currentTarget){
             case this.password: //密码  
             let passreg=/^[a-zA-Z0-9]{8,16}$/;//用户名8到16位
+
             if(!passreg.test(this.password.value.trim())){//如果不符合正则，则显示错误
                 this.errorshow("password","密码不符合规则");//调用显示方法
             }else{

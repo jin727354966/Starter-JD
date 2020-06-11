@@ -139,12 +139,20 @@
 }
 .enrollwrap .formwrap .userp {
   margin-top: 20px;
+  position: relative;
 }
 .enrollwrap .formwrap .userp label {
   background: url(../images/pwd-icons-new.png) 0 0px;
 }
 .enrollwrap .formwrap .pass label {
   background: url(../images/pwd-icons-new.png) -48px 0px;
+}
+.enrollwrap .formwrap .pass u {
+  position: absolute;
+  right: 37px;
+  top: 9px;
+  font-size: 12px;
+  line-height: 18px;
 }
 .enrollwrap .formwrap .forget {
   height: 20px;

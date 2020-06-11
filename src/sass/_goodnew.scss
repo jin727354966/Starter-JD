@@ -17,7 +17,7 @@
         .issue_lb{
             .lb_wrap{
                 width: 220px;
-                height: 215px;
+                height: 230px;
                 padding: 0 10px;
                 position: relative;
                 overflow: hidden;
@@ -81,6 +81,7 @@
                                 margin-bottom: 20px;
                             }
                             span{
+                                line-height: 20px;
                                 color: $tcolor;
                                 font-size: 10px;
                                 i,u{
@@ -123,6 +124,10 @@
             margin-top: 10px;
             .item{
                 ul{
+                    display: none;
+                    &.active{
+                        display: block;
+                    }
                     li{
                         margin: 0 0 10px 10px;
                         width: 220px;

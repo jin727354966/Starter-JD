@@ -28,6 +28,11 @@
 #channel{
     .channel_good{
         font-size: 0;
+        width: 990px;
+        overflow: hidden;
+        .goodwrap{
+            width: 1000px;
+        }
         .bwrap{
             vertical-align: top;
             display: inline-block;

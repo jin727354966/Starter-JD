@@ -17,7 +17,6 @@ class Magnifying {
         this.smallpic = [];//小图的图片,需要根据后台数据生成
         this.sid = null;//详情页的产品数据库的具体哪一条
         this.flag = true;//左键右键点击防抖
-        // this.rightflag = true;//右键点击防抖
         this.speed = 2;//点击移动的速度
         this.spicwidth=0;
         this.picradio=null;//放大镜比例  中图大小：大图大小

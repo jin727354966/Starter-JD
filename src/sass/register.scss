@@ -136,15 +136,22 @@
         }
         .userp{
             margin-top: 20px;
+            position: relative;
             label{
                 background: url(../images/pwd-icons-new.png) 0 0px;  
               }
-            
         }
         .pass{
             label{
                 
                 background: url(../images/pwd-icons-new.png) -48px 0px;  
+              }
+              u{
+                  position: absolute;
+                  right: 37px;
+                  top: 9px;
+                  font-size: 12px;
+                  line-height: 18px;
               }
         }
         .forget{

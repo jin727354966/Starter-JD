@@ -136,6 +136,23 @@
             @include wh(240px,170px);
             position: relative;
             overflow: hidden;
+            ul{
+                position: absolute;
+                left: 50%;
+                bottom: 3px;
+                transform: translateX(-50%);
+                li{
+                    float: left;
+                    margin: 2px;
+                    width: 5px;
+                    height: 5px;
+                    border-radius: 50%;
+                    background-color: #999;
+                    &.active{
+                        background-color: red;
+                    }
+                }
+            }
         }
         .major_lb{
             @include wh(240px,340px);
@@ -155,11 +172,17 @@
                 }
                 p{
                     color: #666;
+                    width: 120px;
+                    height: 20px;
+                    @include noelli();
                 }
                 h3{
                     color: $tColor;
                     font-size: 14px;
                     font-weight: 700;
+                    width: 120px;
+                    height: 18px;
+                    @include noelli();
                 }
                 h5{
                     @include wh(22px,76px);
