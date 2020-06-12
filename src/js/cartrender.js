@@ -217,7 +217,7 @@ class Cartrender{
         }
         /* 发送ajax */
         pajax({
-            url:"http://localhost/Starter-JD/php/cart.php",
+            url:"http://10.31.162.70/Starter-JD/php/cart.php",
             data:{
                 sids:this.sids
             }

@@ -82,7 +82,7 @@ class Addcart{
                 path:"/"
             })
         }
-        location.href="http://localhost/Starter-JD/src/cart.html";//跳转到购物车页面
+        location.href="http://10.31.162.70/Starter-JD/src/cart.html";//跳转到购物车页面
     }
     /* 数量文本框的数据改变，num也要改变  节流*/
     inputHandler(){

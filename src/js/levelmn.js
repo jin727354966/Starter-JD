@@ -27,6 +27,7 @@ class Menu{
         this.textp.addEventListener("mouseover",(e)=>{
             var e= e||window.event;
             e.currentTarget.style.display="block";
+            this.scrollmave();
         })
         /* 滚动条监听 */
         window.addEventListener("scroll",()=>{

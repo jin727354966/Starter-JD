@@ -10,30 +10,8 @@ function demoinit(){
     /* 1 获取头部父容器 显示用户名 */
     headerinit();
     /* 1 搜索框 */
-    
-    
-    // let searchul=document.querySelector('.search-bar .form ul');
-//             console.log(searchtext,searchul);
-          
-
-//             searchtext.oninput=function(){
-//                 let shtimer=setTimeout(()=>{
-//                     let scr=document.createElement('script');
-//                 scr.src='https://suggest.taobao.com/sug?code=utf-8&q='+text.value+'&_ksTS=1589723848122_399&callback=getlist&k=1&area=c2c&bucketid=16';
-//                 document.body.appendChild(scr);
-//                 },300)
-//             }
-    /* 2.1 头部显示隐藏 轮播图 */
-    const bnavc=document.querySelector("#bnav .bnav_c");//总的父容器
-    const bnavpicwrap=bnavc.querySelector(".picwrap");//图片父容器
-    const bnavleftbtn=document.querySelector("#bnav .bnav_c .lbtn");//右键
-    const bnavrightbtn=document.querySelector("#bnav .bnav_c .rbtn");//左键
-    const bnavdotparent=document.querySelector("#bnav .bnav_c .circle");//小圆点父容器
-    const searchtext=document.querySelector(".search_t");//小圆点父容器
-    const searchul=document.querySelector(".form ul");//小圆点父容器
-    // console.log(searchtext);
-    // console.log(searchul);
-    
+    const searchtext=document.querySelector(".search_t");
+    const searchul=document.querySelector(".form ul");
     function getlist(data){
         searchul.innerHTML="";
         for(let i=0;i<data.result.length;i++){
@@ -55,6 +33,13 @@ function demoinit(){
     searchtext.onblur=function(){
         searchul.style.display="none";
     }
+    /* 2.1 头部显示隐藏 轮播图 */
+    const bnavc=document.querySelector("#bnav .bnav_c");//总的父容器
+    const bnavpicwrap=bnavc.querySelector(".picwrap");//图片父容器
+    const bnavleftbtn=document.querySelector("#bnav .bnav_c .lbtn");//右键
+    const bnavrightbtn=document.querySelector("#bnav .bnav_c .rbtn");//左键
+    const bnavdotparent=document.querySelector("#bnav .bnav_c .circle");//小圆点父容器
+    
     let oPage={
         parent:bnavc,
         picparent:bnavpicwrap,//图片父容器
@@ -66,7 +51,7 @@ function demoinit(){
     }
     new Render({
         elem:bnavpicwrap,//要渲染的元素
-        url:"http://localhost/Starter-JD/php/biglun.php",//接口
+        url:"http://10.31.162.70/Starter-JD/php/biglun.php",//接口
         type:"showhide",
         oPage:oPage
     }).init();
@@ -85,7 +70,7 @@ function demoinit(){
     }
     new Render({
         elem:skpicp,//要渲染的元素
-        url:"http://localhost/Starter-JD/php/render.php",//接口
+        url:"http://10.31.162.70/Starter-JD/php/render.php",//接口
         type:"showhide",
         oPage:skpage
     }).init();
@@ -102,7 +87,7 @@ function demoinit(){
     }
     new Render({
         elem:picWrap,//要渲染的元素
-        url:"http://localhost/Starter-JD/php/render.php",//接口
+        url:"http://10.31.162.70/Starter-JD/php/render.php",//接口
         type:"showhide",
         oPage:majorpage
     }).init();
@@ -121,7 +106,7 @@ function demoinit(){
     }
     new Render({
         elem:gnpicWrap,//要渲染的元素
-        url:"http://localhost/Starter-JD/php/render.php",//接口
+        url:"http://10.31.162.70/Starter-JD/php/render.php",//接口
         type:"showhide",
         oPage:gnpage
     }).init();
@@ -147,7 +132,7 @@ function demoinit(){
     }
     new Render({
         elem:fglb,//要渲染的元素
-        url:"http://localhost/Starter-JD/php/render.php",//接口
+        url:"http://10.31.162.70/Starter-JD/php/render.php",//接口
         type:"showhide",
         oPage:fglbpage
     }).init();
@@ -171,7 +156,7 @@ function demoinit(){
     const recommendListul=document.querySelector(".recommend_list ul");
     new Render({
         elem:recommendListul,//要渲染的元素
-        url:"http://localhost/Starter-JD/php/render.php",//接口
+        url:"http://10.31.162.70/Starter-JD/php/render.php",//接口
         type:"indexrec"
     }).init();
     /* 7 频道广场图片渲染 */
@@ -183,7 +168,7 @@ function demoinit(){
     new Channel({
         elem:smallwrap,//要渲染的元素
         smalltemplate:smalltemplate,
-        url:"http://localhost/Starter-JD/php/render.php"//接口
+        url:"http://10.31.162.70/Starter-JD/php/render.php"//接口
     }).init();
 }
 export{demoinit}

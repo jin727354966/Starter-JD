@@ -1,6 +1,6 @@
 import{Enter} from './header.js';//用户登入，cookie获取
 function headerinit(){
-    let lore =document.querySelector("#header .nav .lore");
+    const lore =document.querySelector("#header .nav .lore");
     let as=Array.from(lore.querySelectorAll("a"));
     let user=lore.querySelector(".user");
     let useri=user.querySelector("i");

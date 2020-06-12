@@ -6,15 +6,15 @@ function listinit(){
     /* 1 获取头部父容器 显示用户名 */
     headerinit();
     /*2 列表总页数据渲染 */
-    let goodsul=document.querySelector("#listmain_list .goods_wrap ul");
+    const goodsul=document.querySelector("#listmain_list .goods_wrap ul");
     /* 获取分页需要的元素 */
-    let appoint=document.querySelector("#listmain_list .paging_wrap .paging_r");//指定到几页
-    let pagetext=appoint.querySelector("strong");//共几页
-    let text=appoint.querySelector("input");//指定第几页
-    let btn=appoint.querySelector("a");//指定第几页的按钮
-    let pagingparent=document.querySelector("#listmain_list .paging_wrap .paging_l");//是上一页下一页和每一页码的父容器
-    let prevPage=pagingparent.querySelector("#prevPage");//上一页
-    let nextPage=pagingparent.querySelector("#nextPage");//上一页
+    const appoint=document.querySelector("#listmain_list .paging_wrap .paging_r");//指定到几页
+    const pagetext=appoint.querySelector("strong");//共几页
+    const text=appoint.querySelector("input");//指定第几页
+    const btn=appoint.querySelector("a");//指定第几页的按钮
+    const pagingparent=document.querySelector("#listmain_list .paging_wrap .paging_l");//是上一页下一页和每一页码的父容器
+    const prevPage=pagingparent.querySelector("#prevPage");//上一页
+    const nextPage=pagingparent.querySelector("#nextPage");//上一页
     let oPage={
         itemwrap:pagingparent,//每一页的父容器
         top:prevPage,   //上一页
@@ -27,14 +27,14 @@ function listinit(){
     };
     new Render({
         elem:goodsul,//要渲染的元素
-        url:"http://localhost/Starter-JD/php/render.php",//接口
+        url:"http://10.31.162.70/Starter-JD/php/render.php",//接口
         type:"listmain",
         oPage:oPage
     }).init();
     /* 价格排序 */
-    let pricebtn=document.querySelector("#listmain_list .synthesize .price");
-    let pricetop=pricebtn.querySelector(".top");
-    let pricebot=pricebtn.querySelector(".bot");
+    const pricebtn=document.querySelector("#listmain_list .synthesize .price");
+    const pricetop=pricebtn.querySelector(".top");
+    const pricebot=pricebtn.querySelector(".bot");
     let sortbool=false;
     pricebtn.addEventListener("click",()=>{
         console.log(1);
@@ -60,7 +60,7 @@ function listinit(){
         };
         new Render({
             elem:goodsul,//要渲染的元素
-            url:"http://localhost/Starter-JD/php/render.php",//接口
+            url:"http://10.31.162.70/Starter-JD/php/render.php",//接口
             type:"listmain",
             sortbool:sortbool,
             oPage:oPage2

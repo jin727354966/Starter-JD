@@ -107,7 +107,7 @@ class Enroll{//注册的类  登入的类
             //判断密码是否跟用户名对应
             pajax({
                 type:"post",
-                url:"http://localhost/Starter-JD/php/login.php",
+                url:"http://10.31.162.70/Starter-JD/php/login.php",
                 data:{
                     username:this.username.value.trim(),
                     password:this.password.value.trim()
@@ -153,7 +153,7 @@ class Enroll{//注册的类  登入的类
                 //判断用户名是否被注册
                 pajax({
                     type:"post",
-                    url:"http://localhost/Starter-JD/php/register.php",
+                    url:"http://10.31.162.70/Starter-JD/php/register.php",
                     data:{
                         username:this.username.value.trim()
                     }
@@ -168,7 +168,7 @@ class Enroll{//注册的类  登入的类
                 //判断用户名是否存在
                 pajax({
                     type:"post",
-                    url:"http://localhost/Starter-JD/php/login.php",
+                    url:"http://10.31.162.70/Starter-JD/php/login.php",
                     data:{
                         username:this.username.value.trim()
                     }

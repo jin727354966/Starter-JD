@@ -64,7 +64,7 @@ class Render{
                 if(this.type==="indexrec"){//首页为你推荐
                     this.elem.innerHTML+=`
                     <li class="hac">
-                        <a href="http://localhost/Starter-JD/src/detail.html?sid=${value.sid}">
+                        <a href="http://10.31.162.70/Starter-JD/src/detail.html?sid=${value.sid}">
                             <div class="recommend_pic">
                                 <img src="" alt="" data="${value.url}">
                             </div>

@@ -13,7 +13,7 @@ class Magnifying {
         this.sgrandpa = option.sgrandpa;//小图爷爷
         this.leftbtn = option.leftbtn;//左键按钮
         this.rightbtn = option.rightbtn;//右键按钮
-        this.url = "http://localhost/Starter-JD/php/detail.php";//ajax发送的后端地址
+        this.url = "http://10.31.162.70/Starter-JD/php/detail.php";//ajax发送的后端地址
         this.smallpic = [];//小图的图片,需要根据后台数据生成
         this.sid = null;//详情页的产品数据库的具体哪一条
         this.flag = true;//左键右键点击防抖
